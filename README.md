@@ -1,5 +1,4 @@
 Portifólio - Bruno Gonçalves 💻
-Imagem do projeto finalizado
 
 Confira o projeto aqui
 💻 Sobre
