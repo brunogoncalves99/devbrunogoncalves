@@ -9,7 +9,6 @@
      <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" rel="stylesheet">
     
-    <!-- custom css -->
     <link rel="stylesheet" href="src/css/style.css">
 
     <link
@@ -31,6 +30,7 @@
             <a href="#home" class="active">Home</a>
             <a href="#about">Sobre</a>
             <a href="#skills">Conhecimento</a>
+            <a href="#projects">Projetos</a>
             <a href="#contact">Contato</a>
         </nav>
 
@@ -42,7 +42,6 @@
         </div>
     </header>
 
-    <!-- home section design-->
     <section class="home section-offset" id="home">
         <div class="home-content">
             <h3>Olá, meu nome é</h3>
@@ -60,8 +59,6 @@
         </div>
 
     </section>
-
-    <!-- about section design -->
 
     <section class="about" id="about">
         <div class="home-img">
@@ -92,7 +89,6 @@
         <h1 class="heading"><span>Habilidades</span></h1>
 
         <div class="skills-container">
-            <!-- Hard Skills -->
             <div class="skills-column">
             <h1 class="skills-title">💻 Hard Skills</h1>
             <div class="skills-grid">
@@ -170,7 +166,6 @@
             </div>
             </div>
 
-            <!-- Soft Skills -->
             <div class="skills-column">
             <h3 class="skills-title">🤝 Soft Skills</h3>
             <div class="skills-grid">
@@ -241,6 +236,131 @@
                 </div>
             </div>
             </div>
+        </div>
+    </section>
+
+    <section class="projects" id="projects">
+        <h2 class="heading">Meus <span>Projetos</span></h2>
+        <p class="projects-subtitle">Confira alguns dos projetos que desenvolvi aplicando Clean Architecture, DDD e as melhores práticas</p>
+
+        <div class="projects-container">
+            
+            <div class="project-card">
+                
+                <div class="project-images-slider" id="churrasquinho-slider">
+                    <div class="slider-container">
+                    </div>
+                    <div class="slider-dots" id="churrasquinho-dots">
+                    </div>
+                    <button class="slider-nav prev" onclick="changeSlide('churrasquinho-slider', -1)">
+                        <i class='bx bx-chevron-left'></i>
+                    </button>
+                    <button class="slider-nav next" onclick="changeSlide('churrasquinho-slider', 1)">
+                        <i class='bx bx-chevron-right'></i>
+                    </button>
+                </div>
+
+                <div class="project-content">
+                    <h3>Sistema de Churrascaria</h3>
+                    <p class="project-description">
+                        Sistema completo de gestão para churrascarias com controle de mesas, pedidos, 
+                        comandas e dashboard em tempo real. Desenvolvido com .NET 8, Clean Architecture 
+                        e autenticação JWT.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">.NET 8</span>
+                        <span class="tech-tag">Clean Architecture</span>
+                        <span class="tech-tag">Entity Framework</span>
+                        <span class="tech-tag">SQL Server</span>
+                        <span class="tech-tag">Bootstrap</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-images-slider" id="minibiblioteca-slider">
+                    <div class="slider-container">
+                    </div>
+                    <div class="slider-dots" id="minibiblioteca-dots">
+                    </div>
+                    <button class="slider-nav prev" onclick="changeSlide('minibiblioteca-slider', -1)">
+                        <i class='bx bx-chevron-left'></i>
+                    </button>
+                    <button class="slider-nav next" onclick="changeSlide('minibiblioteca-slider', 1)">
+                        <i class='bx bx-chevron-right'></i>
+                    </button>
+                </div>
+                <div class="project-content">
+                    <h3>MiniBiblioteca</h3>
+                    <p class="project-description">
+                        Sistema de gestão de biblioteca com controle de empréstimos, devoluções, 
+                        cálculo automático de multas por atraso e gerenciamento de acerto. 
+                        Implementado com padrões DDD e CQRS.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">.NET 8</span>
+                        <span class="tech-tag">DDD</span>
+                        <span class="tech-tag">Entity Framework</span>
+                        <span class="tech-tag">SQL Server</span>
+                        <span class="tech-tag">MVC</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-images-slider" id="miniecommerce-slider">
+                    <div class="slider-container">
+                    </div>
+                    <div class="slider-dots" id="miniecommerce-dots">
+                    </div>
+                    <button class="slider-nav prev" onclick="changeSlide('miniecommerce-slider', -1)">
+                        <i class='bx bx-chevron-left'></i>
+                    </button>
+                    <button class="slider-nav next" onclick="changeSlide('miniecommerce-slider', 1)">
+                        <i class='bx bx-chevron-right'></i>
+                    </button>
+                </div>
+                <div class="project-content">
+                    <h3>MiniEcommerce</h3>
+                    <p class="project-description">
+                        Plataforma de e-commerce completa com carrinho de compras, sistema de cupons, 
+                        gestão de produtos e categorias. Arquitetura escalável preparada para microserviços.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">.NET 8</span>
+                        <span class="tech-tag">Clean Architecture</span>
+                        <span class="tech-tag">API REST</span>
+                        <span class="tech-tag">SQL Server</span>
+                        <span class="tech-tag">Bootstrap</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card coming-soon">
+                <div class="project-icon">
+                    <i class='bx bx-code-alt'></i>
+                </div>
+                <div class="project-content">
+                    <h3>Novos Projetos em Breve</h3>
+                    <p class="project-description">
+                        Estou constantemente desenvolvendo novos projetos para expandir meu portfólio. 
+                        Acompanhe meu GitHub para ver as novidades!
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Microservices</span>
+                        <span class="tech-tag">Docker</span>
+                        <span class="tech-tag">RabbitMQ</span>
+                        <span class="tech-tag">Azure</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="view-more">
+            <a href="https://github.com/brunogoncalves99" target="_blank" class="btn">
+                <i class='bx bxl-github'></i> Ver Todos os Projetos
+            </a>
         </div>
     </section>
 
