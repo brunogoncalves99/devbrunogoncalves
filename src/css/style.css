@@ -1173,3 +1173,452 @@ color: var(--main-color);
     height: 8px;
   }
 }
+/*=============== MELHORIAS V1.5 - 5 PRINCIPAIS ===============*/
+
+/* ========== MELHORIA 1: STATUS BADGE ========== */
+.status-container {
+    margin: 2rem 0;
+}
+
+.status-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem 1.5rem;
+    background: rgba(0, 255, 0, 0.1);
+    border: 2px solid rgba(0, 255, 0, 0.3);
+    border-radius: 2rem;
+    margin-bottom: 1rem;
+    animation: fadeIn 0.5s ease-in;
+}
+
+.status-dot {
+    width: 10px;
+    height: 10px;
+    background: #0f0;
+    border-radius: 50%;
+    animation: pulse 2s infinite;
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.6;
+        transform: scale(0.95);
+    }
+}
+
+.status-text {
+    font-size: 1.4rem;
+    color: #0f0;
+    font-weight: 500;
+}
+
+.work-preferences {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1.5rem;
+    background: rgba(14, 255, 255, 0.1);
+    border: 1px solid rgba(14, 255, 255, 0.2);
+    border-radius: 2rem;
+    font-size: 1.3rem;
+    color: var(--text-color);
+}
+
+.work-preferences i {
+    color: var(--main-color);
+    font-size: 1.6rem;
+}
+
+/* ========== MELHORIA 5: STORYTELLING (Estilo para parágrafos) ========== */
+.about-story p {
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+}
+
+.about-story p strong {
+    color: var(--main-color);
+    font-weight: 600;
+}
+
+/* ========== MELHORIA 5: MÉTRICAS NO SOBRE ========== */
+.about-metrics {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 2rem;
+    margin: 3rem 0;
+    padding: 2rem;
+    background: rgba(14, 255, 255, 0.05);
+    border-radius: 1rem;
+    border: 1px solid rgba(14, 255, 255, 0.1);
+}
+
+.metric-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0.5rem;
+}
+
+.metric-icon {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--main-color);
+    border-radius: 50%;
+    margin-bottom: 0.5rem;
+}
+
+.metric-icon i {
+    font-size: 2.5rem;
+    color: var(--bg-color);
+}
+
+.metric-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.metric-number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--main-color);
+    line-height: 1;
+}
+
+.metric-label {
+    font-size: 1.2rem;
+    color: var(--text-color);
+    margin-top: 0.25rem;
+}
+
+/* ========== MELHORIA 3: BADGES DOS PROJETOS ========== */
+.project-badges {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    z-index: 5;
+}
+
+.badge {
+    padding: 0.4rem 1rem;
+    border-radius: 1.5rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    animation: fadeInDown 0.5s ease-out;
+}
+
+.badge-featured {
+    background: rgba(255, 215, 0, 0.2);
+    color: #ffd700;
+    border-color: rgba(255, 215, 0, 0.4);
+}
+
+.badge-complete {
+    background: rgba(0, 255, 0, 0.2);
+    color: #0f0;
+    border-color: rgba(0, 255, 0, 0.4);
+}
+
+.badge-production {
+    background: rgba(14, 255, 255, 0.2);
+    color: var(--main-color);
+    border-color: rgba(14, 255, 255, 0.4);
+}
+
+/* ========== MELHORIA 3: MÉTRICAS DOS PROJETOS ========== */
+.project-metrics {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin: 1.5rem 0;
+    padding: 1.5rem;
+    background: rgba(14, 255, 255, 0.05);
+    border-radius: 0.8rem;
+    border: 1px solid rgba(14, 255, 255, 0.1);
+}
+
+.metric-item-small {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.3rem;
+}
+
+.metric-item-small i {
+    color: var(--main-color);
+    font-size: 1.8rem;
+}
+
+.metric-item-small span {
+    color: var(--text-color);
+    font-weight: 500;
+}
+
+/* ========== MELHORIA 3: ARQUITETURA DOS PROJETOS ========== */
+.project-architecture {
+    margin: 1.5rem 0;
+    padding: 1.5rem;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 0.8rem;
+    border-left: 4px solid var(--main-color);
+}
+
+.project-architecture h4 {
+    color: var(--main-color);
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.project-architecture ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.project-architecture li {
+    font-size: 1.3rem;
+    color: var(--text-color);
+    margin-bottom: 0.75rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.project-architecture li::before {
+    content: '▹';
+    position: absolute;
+    left: 0;
+    color: var(--main-color);
+    font-size: 1.5rem;
+}
+
+.project-architecture li strong {
+    color: var(--main-color);
+    font-weight: 600;
+}
+
+/* ========== MELHORIA 4: CTA HERO NO CONTATO ========== */
+.cta-hero {
+    background: linear-gradient(135deg, rgba(14, 255, 255, 0.1), rgba(14, 255, 255, 0.05));
+    border: 2px solid rgba(14, 255, 255, 0.3);
+    border-radius: 2rem;
+    padding: 3rem;
+    margin-bottom: 4rem;
+    text-align: center;
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.cta-content h3 {
+    font-size: 2.5rem;
+    color: var(--text-color);
+    margin-bottom: 1rem;
+}
+
+.cta-content p {
+    font-size: 1.6rem;
+    color: var(--text-color);
+    line-height: 1.8;
+    max-width: 700px;
+    margin: 0 auto 2rem;
+}
+
+.cta-content p strong {
+    color: var(--main-color);
+    font-weight: 600;
+}
+
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.btn-whatsapp {
+    background: #25D366;
+    color: #fff;
+    padding: 1.2rem 2.5rem;
+    border-radius: 3rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    transition: all 0.3s ease;
+    border: 2px solid #25D366;
+    text-decoration: none;
+}
+
+.btn-whatsapp:hover {
+    background: #128C7E;
+    border-color: #128C7E;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(37, 211, 102, 0.3);
+}
+
+.btn-whatsapp i {
+    font-size: 2rem;
+}
+
+.btn-linkedin {
+    background: #0077B5;
+    color: #fff;
+    padding: 1.2rem 2.5rem;
+    border-radius: 3rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    transition: all 0.3s ease;
+    border: 2px solid #0077B5;
+    text-decoration: none;
+}
+
+.btn-linkedin:hover {
+    background: #005885;
+    border-color: #005885;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0, 119, 181, 0.3);
+}
+
+.btn-linkedin i {
+    font-size: 2rem;
+}
+
+/* ========== ANIMAÇÕES ========== */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ========== RESPONSIVO ========== */
+@media (max-width: 768px) {
+    .status-badge {
+        padding: 0.6rem 1.2rem;
+    }
+
+    .status-text {
+        font-size: 1.2rem;
+    }
+
+    .work-preferences {
+        font-size: 1.1rem;
+        padding: 0.4rem 1rem;
+    }
+
+    .about-metrics {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+        padding: 1.5rem;
+    }
+
+    .metric-number {
+        font-size: 2rem;
+    }
+
+    .metric-label {
+        font-size: 1rem;
+    }
+
+    .project-metrics {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .project-architecture {
+        padding: 1rem;
+    }
+
+    .project-architecture h4 {
+        font-size: 1.2rem;
+    }
+
+    .project-architecture li {
+        font-size: 1.1rem;
+    }
+
+    .cta-hero {
+        padding: 2rem 1.5rem;
+    }
+
+    .cta-content h3 {
+        font-size: 2rem;
+    }
+
+    .cta-content p {
+        font-size: 1.4rem;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .btn-whatsapp,
+    .btn-linkedin {
+        width: 100%;
+        justify-content: center;
+        padding: 1rem 2rem;
+        font-size: 1.4rem;
+    }
+
+    .project-badges {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+@media (max-width: 450px) {
+    .about-metrics {
+        grid-template-columns: 1fr;
+    }
+
+    .metric-icon {
+        width: 50px;
+        height: 50px;
+    }
+
+    .metric-icon i {
+        font-size: 2rem;
+    }
+}

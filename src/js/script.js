@@ -34,6 +34,7 @@ window.onscroll = () => {
 
 
 ScrollReveal({
+    // reset: true,
     distance: '80px',
     duration: 2000,
     delay: 200
@@ -58,6 +59,7 @@ ScrollReveal().reveal('.view-more', {
     duration: 1500,
     delay: 400
 });
+
 
 const projectSliders = {
     'churrasquinho-slider': {
