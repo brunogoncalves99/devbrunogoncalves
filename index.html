@@ -149,7 +149,7 @@
                 </div>
             </div>
 
-            <button href="#" class="btn" onclick="abrirCurriculo()"> Download Currículo </button> 
+            <button href="#" class="btn" onclick="abrirCurriculo()"> Abrir Currículo </button> 
         </div>
 
     </section>
@@ -509,6 +509,88 @@
                         <span class="tech-tag">Bootstrap</span>
                     </div>
                     
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-badges">
+                    <span class="badge badge-featured">⭐ Destaque</span>
+                    <span class="badge badge-development">🔄 Em Desenvolvimento</span>
+                </div>
+                <div class="project-images-slider" id="financeiro-slider">
+                    <div class="slider-container">
+                    </div>
+                    <div class="slider-dots" id="financeiro-dots">
+                    </div>
+                    <button class="slider-nav prev" onclick="changeSlide('financeiro-slider', -1)">
+                        <i class='bx bx-chevron-left'></i>
+                    </button>
+                    <button class="slider-nav next" onclick="changeSlide('financeiro-slider', 1)">
+                        <i class='bx bx-chevron-right'></i>
+                    </button>
+                </div>
+                <div class="project-content">
+                    <h3>Sistema Financeiro Monitor</h3>
+                    <p class="project-description">
+                        Sistema de monitoramento de cotações de moedas e indicadores econômicos com alertas 
+                        inteligentes por e-mail. Consome APIs públicas do Banco Central, processa dados em 
+                        background e exibe dashboards interativos com gráficos em tempo real.
+                    </p>
+                    <div class="project-metrics">
+                        <div class="metric-item-small">
+                            <i class='bx bx-code-alt'></i>
+                            <span>8.000+ linhas</span>
+                        </div>
+                        <div class="metric-item-small">
+                            <i class='bx bx-git-commit'></i>
+                            <span>85+ commits</span>
+                        </div>
+                        <div class="metric-item-small">
+                            <i class='bx bx-time'></i>
+                            <span>1 mês</span>
+                        </div>
+                        <div class="metric-item-small">
+                            <i class='bx bx-layer'></i>
+                            <span>Clean Arch</span>
+                        </div>
+                    </div>
+                    <div class="project-architecture">
+                        <h4>🏗️ Arquitetura & Padrões:</h4>
+                        <ul>
+                            <li><strong>Clean Architecture</strong> com 4 camadas (Domain, Application, Infrastructure, Web)</li>
+                            <li><strong>DDD</strong> com Entities, Value Objects e Domain Events</li>
+                            <li><strong>Repository Pattern</strong> com EF Core e SOLID principles</li>
+                            <li><strong>Background Jobs</strong> com Hangfire para processamento assíncrono</li>
+                        </ul>
+                    </div>
+                    <div class="project-features">
+                        <h4>✨ Funcionalidades Principais:</h4>
+                        <ul>
+                            <li><strong>Consumo de APIs Públicas</strong> do Banco Central (PTAX, SELIC, IPCA)</li>
+                            <li><strong>Sistema de Alertas</strong> configuráveis com notificações por e-mail</li>
+                            <li><strong>Dashboard Interativo</strong> com gráficos Chart.js e dados em tempo real</li>
+                            <li><strong>Jobs Recorrentes</strong> para atualização automática de dados</li>
+                            <li><strong>Gestão de Indicadores</strong> econômicos e cotações de moedas</li>
+                        </ul>
+                    </div>
+
+                    <div class="project-tech">
+                        <span class="tech-tag">.NET 8</span>
+                        <span class="tech-tag">Clean Architecture</span>
+                        <span class="tech-tag">DDD</span>
+                        <span class="tech-tag">Entity Framework Core</span>
+                        <span class="tech-tag">SQL Server</span>
+                        <span class="tech-tag">Hangfire</span>
+                        <span class="tech-tag">Chart.js</span>
+                        <span class="tech-tag">Bootstrap 5</span>
+                        <span class="tech-tag">jQuery/AJAX</span>
+                        <span class="tech-tag">API REST</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/seuusuario/SistemaFinanceiroMonitor" target="_blank" class="btn-project">
+                            <i class='bx bxl-github'></i> Ver no GitHub
+                        </a>
+                    </div>
                 </div>
             </div>
 

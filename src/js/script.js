@@ -81,6 +81,13 @@ const projectSliders = {
         currentIndex: 0,
         interval: null,
         autoplayDelay: 2000 
+    },
+
+    'financeiro-slider': {
+        images: Array.from({length: 7}, (_, i) => `src/images/SistemaFinanceiroMonitor/${i + 1}.png`),
+        currentIndex: 0,
+        interval: null,
+        autoplayDelay: 2000 
     }
 };
 

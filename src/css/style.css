@@ -126,7 +126,6 @@ section {
     }
 }
 
-/* ===== HEADER BASE ===== */
 
 .section-offset {
   padding-top: 100px; 
@@ -161,8 +160,6 @@ section {
     margin-bottom: 2rem;
 }
 
-/* ===== HEADER BASE ===== */
-
 @media (max-width: 768px) {
   .social-media {
     display: flex;   
@@ -175,8 +172,6 @@ section {
     font-size: 1.6rem;    
   }
 }
-
-/* ===== HEADER BASE ===== */
 
 span {
     color: var(--main-color)
@@ -553,14 +548,6 @@ color: var(--main-color);
 }
 
 
-/*==== code =====*/
-
-
-
-/*===== CONTACT ===============================================*/
-
-/*===== CONTACT ===============================================*/
-
 .contact {
   padding: 100px 10%;
   background: var(--second-bg-color);
@@ -591,14 +578,14 @@ color: var(--main-color);
 .contact-link {
   display: flex;
   align-items: center;
-  justify-content: center; /* <-- Centraliza o conteúdo */
-  flex-wrap: wrap; /* <-- Garante que o texto quebre corretamente */
+  justify-content: center; 
+  flex-wrap: wrap; 
   gap: 10px;
   font-size: 1.1rem;
   color: var(--text-color);
   text-decoration: none;
-  text-align: center; /* <-- Centraliza texto interno */
-  word-break: break-word; /* <-- Evita quebra feia de telefone/email */
+  text-align: center; 
+  word-break: break-word; 
 }
 
 .contact-link i {
@@ -615,12 +602,12 @@ color: var(--main-color);
 
   .contact-box {
     width: 85%;
-    padding: 25px 40px; /* <-- Reduz padding pra caber melhor */
+    padding: 25px 40px; 
   }
 
   .contact-link {
-    flex-direction: column; /* <-- Ícone em cima, texto embaixo */
-    font-size: 1rem; /* Ajusta tamanho da fonte */
+    flex-direction: column; 
+    font-size: 1rem; 
     gap: 5px;
   }
 
@@ -631,7 +618,6 @@ color: var(--main-color);
   }
 }
 
-/*===== Skilss ===========================================*/
 
 .skills {
   padding: 60px 10%;
@@ -729,11 +715,10 @@ color: var(--main-color);
   transform: rotateY(180deg) scale(1.05);
 }
 
-/* Título principal da seção */
 .skills .heading {
   text-align: center;
-  font-size: 3rem; /* Aumentado */
-  font-weight: 700; /* Mais destaque */
+  font-size: 3rem;
+  font-weight: 700; 
   margin-bottom: 50px;
   color: #00bfff;
   text-transform: uppercase;
@@ -741,24 +726,20 @@ color: var(--main-color);
   font-family: 'Poppins', sans-serif;
 }
 
-/* Linha decorativa abaixo do título (opcional) */
 .skills .heading span {
   display: inline-block;
   padding-bottom: 8px;
   font-family: 'Poppins', sans-serif;
 }
 
-/* Título de Hard Skills e Soft Skills */
 .skills-title {
   text-align: center;
-  font-size: 1.8rem; /* Aumentado */
+  font-size: 1.8rem; 
   font-weight: 600;
   color: #ffffff;
   margin-bottom: 25px;
   font-family: 'Poppins', sans-serif;
 }
-
-/*===== PROJECTS SECTION ===============================================*/
 
 .projects {
   padding: 100px 10%;
@@ -794,7 +775,7 @@ color: var(--main-color);
 .project-card {
   background: var(--bg-color);
   border-radius: 2rem;
-  padding: 0; /* Removido padding para acomodar imagens */
+  padding: 0; 
   box-shadow: 0 0 2rem rgba(0, 0, 0, 0.5);
   transition: all 0.4s ease;
   border: 2px solid transparent;
@@ -827,7 +808,6 @@ color: var(--main-color);
   background: linear-gradient(180deg, rgba(14, 255, 255, 0.1), transparent);
 }
 
-/* ===== CARROSSEL DE IMAGENS ===== */
 .project-images-slider {
   position: relative;
   width: 100%;
@@ -857,7 +837,6 @@ color: var(--main-color);
   z-index: 1;
 }
 
-/* Navegação do Slider */
 .slider-nav {
   position: absolute;
   top: 50%;
@@ -895,7 +874,6 @@ color: var(--main-color);
   font-size: 24px;
 }
 
-/* Indicadores (Dots) */
 .slider-dots {
   position: absolute;
   bottom: 15px;
@@ -928,7 +906,6 @@ color: var(--main-color);
   transform: scale(1.2);
 }
 
-/* Ajuste do conteúdo do projeto */
 .project-content {
   padding: 3rem;
 }
@@ -968,6 +945,7 @@ color: var(--main-color);
   flex-wrap: wrap;
   gap: 10px;
   margin-bottom: 25px;
+  margin-top: 2rem;
 }
 
 .tech-tag {
@@ -1028,9 +1006,8 @@ color: var(--main-color);
   box-shadow: 0 5px 15px rgba(136, 136, 136, 0.4);
 }
 
-/* Card de Projetos Futuros */
 .coming-soon {
-  padding: 3rem; /* Adiciona padding de volta para card sem imagem */
+  padding: 3rem; 
 }
 
 .coming-soon {
@@ -1074,7 +1051,6 @@ color: var(--main-color);
   font-size: 2rem;
 }
 
-/* Responsivo para Projetos */
 @media (max-width: 768px) {
   .projects {
     padding: 80px 5%;
@@ -1173,9 +1149,7 @@ color: var(--main-color);
     height: 8px;
   }
 }
-/*=============== MELHORIAS V1.5 - 5 PRINCIPAIS ===============*/
 
-/* ========== MELHORIA 1: STATUS BADGE ========== */
 .status-container {
     margin: 2rem 0;
 }
@@ -1235,7 +1209,6 @@ color: var(--main-color);
     font-size: 1.6rem;
 }
 
-/* ========== MELHORIA 5: STORYTELLING (Estilo para parágrafos) ========== */
 .about-story p {
     margin-bottom: 1.5rem;
     line-height: 1.8;
@@ -1246,7 +1219,6 @@ color: var(--main-color);
     font-weight: 600;
 }
 
-/* ========== MELHORIA 5: MÉTRICAS NO SOBRE ========== */
 .about-metrics {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
@@ -1300,7 +1272,6 @@ color: var(--main-color);
     margin-top: 0.25rem;
 }
 
-/* ========== MELHORIA 3: BADGES DOS PROJETOS ========== */
 .project-badges {
     position: absolute;
     top: 1rem;
@@ -1339,7 +1310,87 @@ color: var(--main-color);
     border-color: rgba(14, 255, 255, 0.4);
 }
 
-/* ========== MELHORIA 3: MÉTRICAS DOS PROJETOS ========== */
+.badge-development {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    animation: pulse-badge 2s ease-in-out infinite;
+}
+
+@keyframes pulse-badge {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.8;
+    }
+}
+
+
+.project-features {
+    margin-top: 1.5rem;
+    padding: 1.5rem;
+    background: rgba(14, 255, 255, 0.05);
+    border-radius: 8px;
+    border-left: 4px solid var(--color-primary, #667eea);
+}
+
+.project-features h4 {
+    color: var(--color-primary, #667eea);
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+.project-features ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.project-features ul li {
+    padding: 0.5rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.project-features ul li:before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--color-success, #28a745);
+    font-weight: bold;
+}
+
+.project-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.btn-project {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    background: var(--color-primary, #667eea);
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-project:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
+
+.btn-project.btn-secondary {
+    background: var(--color-secondary, #6c757d);
+}
+
+.btn-project.btn-secondary:hover {
+    box-shadow: 0 4px 12px rgba(108, 117, 125, 0.4);
+}
+
 .project-metrics {
     display: flex;
     flex-wrap: wrap;
