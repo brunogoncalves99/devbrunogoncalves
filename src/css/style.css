@@ -1419,7 +1419,6 @@ color: var(--main-color);
     font-weight: 500;
 }
 
-/* ========== MELHORIA 3: ARQUITETURA DOS PROJETOS ========== */
 .project-architecture {
     margin: 1.5rem 0;
     padding: 1.5rem;
@@ -1459,95 +1458,6 @@ color: var(--main-color);
 .project-architecture li strong {
     color: var(--main-color);
     font-weight: 600;
-}
-
-/* ========== MELHORIA 4: CTA HERO NO CONTATO ========== */
-.cta-hero {
-    background: linear-gradient(135deg, rgba(14, 255, 255, 0.1), rgba(14, 255, 255, 0.05));
-    border: 2px solid rgba(14, 255, 255, 0.3);
-    border-radius: 2rem;
-    padding: 3rem;
-    margin-bottom: 4rem;
-    text-align: center;
-    animation: fadeInUp 0.8s ease-out;
-}
-
-.cta-content h3 {
-    font-size: 2.5rem;
-    color: var(--text-color);
-    margin-bottom: 1rem;
-}
-
-.cta-content p {
-    font-size: 1.6rem;
-    color: var(--text-color);
-    line-height: 1.8;
-    max-width: 700px;
-    margin: 0 auto 2rem;
-}
-
-.cta-content p strong {
-    color: var(--main-color);
-    font-weight: 600;
-}
-
-.cta-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 1.5rem;
-    flex-wrap: wrap;
-}
-
-.btn-whatsapp {
-    background: #25D366;
-    color: #fff;
-    padding: 1.2rem 2.5rem;
-    border-radius: 3rem;
-    font-size: 1.5rem;
-    font-weight: 600;
-    display: inline-flex;
-    align-items: center;
-    gap: 0.75rem;
-    transition: all 0.3s ease;
-    border: 2px solid #25D366;
-    text-decoration: none;
-}
-
-.btn-whatsapp:hover {
-    background: #128C7E;
-    border-color: #128C7E;
-    transform: translateY(-3px);
-    box-shadow: 0 10px 25px rgba(37, 211, 102, 0.3);
-}
-
-.btn-whatsapp i {
-    font-size: 2rem;
-}
-
-.btn-linkedin {
-    background: #0077B5;
-    color: #fff;
-    padding: 1.2rem 2.5rem;
-    border-radius: 3rem;
-    font-size: 1.5rem;
-    font-weight: 600;
-    display: inline-flex;
-    align-items: center;
-    gap: 0.75rem;
-    transition: all 0.3s ease;
-    border: 2px solid #0077B5;
-    text-decoration: none;
-}
-
-.btn-linkedin:hover {
-    background: #005885;
-    border-color: #005885;
-    transform: translateY(-3px);
-    box-shadow: 0 10px 25px rgba(0, 119, 181, 0.3);
-}
-
-.btn-linkedin i {
-    font-size: 2rem;
 }
 
 /* ========== ANIMAÇÕES ========== */
