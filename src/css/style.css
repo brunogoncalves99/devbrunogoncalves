@@ -1673,3 +1673,116 @@ color: var(--main-color);
         font-size: 2rem;
     }
 }
+
+.experience {
+    background: var(--bg-color);
+    padding: 10rem 9% 2rem;
+}
+
+.experience-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.experience-item {
+    background: var(--second-bg-color);
+    border-radius: 1rem;
+    padding: 3rem;
+    margin-bottom: 3rem;
+    border: .2rem solid rgba(0, 238, 255, 0.1);
+    transition: .5s ease;
+}
+
+.experience-item:hover {
+    border-color: var(--main-color);
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px rgba(0, 238, 255, 0.2);
+}
+
+.experience-header {
+    margin-bottom: 2rem;
+}
+
+.experience-header h3 {
+    font-size: 2.4rem;
+    color: var(--main-color);
+    margin-bottom: 0.5rem;
+}
+
+.experience-company {
+    display: block;
+    font-size: 1.6rem;
+    color: var(--text-color);
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.experience-location {
+    display: block;
+    font-size: 1.4rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.experience-content p {
+    font-size: 1.6rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.experience-content ul {
+    list-style: none;
+    padding: 0;
+}
+
+.experience-content ul li {
+    font-size: 1.5rem;
+    margin-bottom: 0.8rem;
+    padding-left: 2rem;
+    position: relative;
+}
+
+.experience-content ul li::before {
+    content: "✓";
+    color: var(--main-color);
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+.about-buttons {
+    display: flex;
+    gap: 2rem;
+    margin-top: 3rem;
+    flex-wrap: wrap;
+}
+
+.btn-secondary {
+    background: transparent;
+    border: 2px solid var(--main-color);
+    color: var(--main-color);
+}
+
+.btn-secondary:hover {
+    background: var(--main-color);
+    color: var(--bg-color);
+}
+
+@media (max-width: 768px) {
+    .experience-item {
+        padding: 2rem;
+    }
+
+    .experience-header h3 {
+        font-size: 2rem;
+    }
+
+    .about-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-buttons .btn {
+        width: 100%;
+        text-align: center;
+    }
+}

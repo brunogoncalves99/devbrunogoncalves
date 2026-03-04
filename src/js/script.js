@@ -45,6 +45,14 @@ ScrollReveal().reveal('.home-img, .services-container, .portfolio-box, .contact 
 ScrollReveal().reveal('.home-content h1, .about-img', { origin: 'left' });
 ScrollReveal().reveal('.home-content p, .about-content', { origin: 'right' });
 
+ScrollReveal().reveal('.experience-item', { 
+    origin: 'bottom',
+    distance: '50px',
+    duration: 1500,
+    delay: 300,
+    interval: 200
+});
+
 ScrollReveal().reveal('.project-card', { 
     origin: 'bottom',
     distance: '60px',
