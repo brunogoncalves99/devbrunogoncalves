@@ -1,3 +1,4 @@
+﻿// ===== MENU TOGGLE =====
 let menuIcon = document.querySelector('#menu-icon');
 let navbar = document.querySelector('.navbar');
 
@@ -6,6 +7,7 @@ menuIcon.onclick = () => {
     navbar.classList.toggle('active');
 }
 
+// ===== NAVIGATION HIGHLIGHT =====
 let sections = document.querySelectorAll('section');
 let navLinks = document.querySelectorAll('header nav a');
 
@@ -17,36 +19,38 @@ navLinks.forEach(link => {
     });
 });
 
+// ===== PROJECT SLIDERS CONFIG =====
 const projectSliders = {
     'churrasquinho-slider': {
-        images: Array.from({length: 17}, (_, i) => `./src/images/Churrasquinho/${i + 1}.png`),
+        images: Array.from({length: 17}, (_, i) => './src/images/Churrasquinho/' + (i + 1) + '.png'),
         currentIndex: 0,
         interval: null,
-        autoplayDelay: 2000 
+        autoplayDelay: 2000
     },
     
     'minibiblioteca-slider': {
-        images: Array.from({length: 9}, (_, i) => `./src/images/MiniBiblioteca/${i + 1}.jpg`),
+        images: Array.from({length: 9}, (_, i) => './src/images/MiniBiblioteca/' + (i + 1) + '.jpg'),
         currentIndex: 0,
         interval: null,
-        autoplayDelay: 2000 
+        autoplayDelay: 2000
     },
     
     'miniecommerce-slider': {
-        images: Array.from({length: 6}, (_, i) => `./src/images/MiniEcommerce/${i + 1}.jpg`),
+        images: Array.from({length: 6}, (_, i) => './src/images/MiniEcommerce/' + (i + 1) + '.jpg'),
         currentIndex: 0,
         interval: null,
-        autoplayDelay: 2000 
+        autoplayDelay: 2000
     },
 
     'financeiro-slider': {
-        images: Array.from({length: 7}, (_, i) => `./src/images/SistemaFinanceiroMonitor/${i + 1}.png`),
+        images: Array.from({length: 7}, (_, i) => './src/images/SistemaFinanceiroMonitor/' + (i + 1) + '.png'),
         currentIndex: 0,
         interval: null,
-        autoplayDelay: 2000 
+        autoplayDelay: 2000
     }
 };
 
+// ===== SCROLL EFFECTS =====
 window.onscroll = () => {
     sections.forEach(sec => {
         let top = window.scrollY;
@@ -63,14 +67,13 @@ window.onscroll = () => {
     });
 
     let header = document.querySelector('header');
-
     header.classList.toggle('sticky', window.scrollY > 100);
 
     menuIcon.classList.remove('bx-x');
     navbar.classList.remove('active');
 };
 
-// ===== utility functions =====
+// ===== UTILITY FUNCTIONS =====
 function updateFooterYear() {
     const yearEl = document.getElementById('year');
     if (yearEl) yearEl.textContent = new Date().getFullYear();
@@ -82,7 +85,7 @@ function applyTheme(theme) {
     const icon = document.querySelector('#theme-toggle i');
     if (icon) icon.className = theme === 'light' ? 'bx bx-sun' : 'bx bx-moon';
     // update mobile browser theme color meta
-    const meta = document.querySelector('meta[name="theme-color"]');
+    const meta = document.querySelector('meta[name=\"theme-color\"]');
     if (meta) meta.setAttribute('content', theme === 'light' ? '#ffffff' : '#0ef');
     localStorage.setItem('theme', theme);
 }
@@ -104,9 +107,8 @@ function setupThemeToggle() {
     }
 }
 
-
+// ===== ANIMATIONS =====
 ScrollReveal({
-    // reset: true,
     distance: '80px',
     duration: 2000,
     delay: 200
@@ -140,51 +142,7 @@ ScrollReveal().reveal('.view-more', {
     delay: 400
 });
 
-    // gsap animations if available
-    /*
-    if (window.gsap) {
-        gsap.registerPlugin(ScrollTrigger);
-
-        // fade in each section on scroll
-        gsap.utils.toArray('section').forEach(sec => {
-            gsap.from(sec, {
-                opacity: 0,
-                y: 30,
-                duration: 0.8,
-                scrollTrigger: {
-                    trigger: sec,
-                    start: 'top 80%',
-                    toggleActions: 'play none none none'
-                }
-            });
-        });
-
-        // hero image parallax
-        gsap.to('.home-img', {
-            y: 50,
-            ease: 'none',
-            scrollTrigger: {
-                trigger: '.home',
-                start: 'top top',
-                end: 'bottom top',
-                scrub: true
-            }
-        });
-
-        // stagger project cards entrance
-        gsap.from('.project-card', {
-            opacity: 0,
-            y: 20,
-            duration: 0.6,
-            stagger: 0.15,
-            scrollTrigger: {
-                trigger: '.projects',
-                start: 'top 75%'
-            }
-        });
-    }
-    */
-
+// ===== DOM CONTENT LOADED =====
 document.addEventListener('DOMContentLoaded', function() {
     try {
         Object.keys(projectSliders).forEach(sliderId => {
@@ -193,6 +151,10 @@ document.addEventListener('DOMContentLoaded', function() {
     } catch (error) {
         console.error('Error initializing sliders:', error);
     }
+
+    // project filter functionality
+    setupProjectFilters();
+
     updateFooterYear();
     setupThemeToggle();
 
@@ -240,13 +202,11 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // register service worker for caching
-    /*
     if ('serviceWorker' in navigator) {
         navigator.serviceWorker.register('./src/js/sw.js')
           .then(reg => console.log('SW registered'))
           .catch(err => console.log('SW registration failed', err));
     }
-    */
 
     const contactForm = document.getElementById('contact-form');
     const feedback = document.getElementById('form-feedback');
@@ -259,11 +219,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
             if (!name || !email || !message) {
                 showFeedback('Por favor, preencha todos os campos.', 'error');
-                return;
-            }
-
-            if (!/\S+@\S+\.\S+/.test(email)) {
-                showFeedback('E-mail inválido.', 'error');
                 return;
             }
 
@@ -292,11 +247,36 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function showFeedback(message, type) {
         feedback.textContent = message;
-        feedback.className = `form-feedback ${type}`;
+        feedback.className = orm-feedback ;
         setTimeout(() => feedback.textContent = '', 5000);
     }
 });
 
+// ===== PROJECT FILTERS =====
+function setupProjectFilters() {
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const projectCards = document.querySelectorAll('.project-card');
+
+    filterButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            // update active button
+            filterButtons.forEach(btn => btn.classList.remove('active'));
+            button.classList.add('active');
+
+            const filterValue = button.getAttribute('data-filter');
+
+            projectCards.forEach(card => {
+                if (filterValue === 'all' || card.classList.contains(filterValue.substring(1))) {
+                    card.classList.remove('hidden');
+                } else {
+                    card.classList.add('hidden');
+                }
+            });
+        });
+    });
+}
+
+// ===== SLIDER FUNCTIONS =====
 function initializeSlider(sliderId) {
     const sliderElement = document.getElementById(sliderId);
     if (!sliderElement) return;
@@ -304,6 +284,14 @@ function initializeSlider(sliderId) {
     const config = projectSliders[sliderId];
     const container = sliderElement.querySelector('.slider-container');
     const dotsContainer = sliderElement.querySelector('.slider-dots');
+
+    // add loading indicator
+    const loading = document.createElement('div');
+    loading.className = 'slider-loading';
+    container.appendChild(loading);
+
+    let loadedImages = 0;
+    const totalImages = config.images.length;
 
     config.images.forEach((imageSrc, index) => {
         const img = document.createElement('img');
@@ -313,9 +301,20 @@ function initializeSlider(sliderId) {
         img.classList.add('slider-image');
         if (index === 0) img.classList.add('active');
         
+        img.onload = () => {
+            loadedImages++;
+            if (loadedImages === totalImages) {
+                loading.remove();
+            }
+        };
+        
         img.onerror = function() {
+            loadedImages++;
             this.style.display = 'none';
             console.warn(`Imagem não encontrada: ${imageSrc}`);
+            if (loadedImages === totalImages) {
+                loading.remove();
+            }
         };
         
         container.appendChild(img);
@@ -330,21 +329,18 @@ function initializeSlider(sliderId) {
     });
 
     startAutoplay(sliderId);
-
     sliderElement.addEventListener('mouseenter', () => stopAutoplay(sliderId));
     sliderElement.addEventListener('mouseleave', () => startAutoplay(sliderId));
 }
 
 function changeSlide(sliderId, direction) {
     const config = projectSliders[sliderId];
-    const newIndex = (config.currentIndex + direction + config.images.length) % config.images.length;
-    goToSlide(sliderId, newIndex);
+    goToSlide(sliderId, (config.currentIndex + direction + config.images.length) % config.images.length);
 }
 
 function goToSlide(sliderId, index) {
     const config = projectSliders[sliderId];
     const sliderElement = document.getElementById(sliderId);
-    
     if (!sliderElement) return;
 
     const images = sliderElement.querySelectorAll('.slider-image');
@@ -361,14 +357,8 @@ function goToSlide(sliderId, index) {
 
 function startAutoplay(sliderId) {
     const config = projectSliders[sliderId];
-    
-    if (config.interval) {
-        clearInterval(config.interval);
-    }
-
-    config.interval = setInterval(() => {
-        changeSlide(sliderId, 1);
-    }, config.autoplayDelay);
+    if (config.interval) clearInterval(config.interval);
+    config.interval = setInterval(() => changeSlide(sliderId, 1), config.autoplayDelay);
 }
 
 function stopAutoplay(sliderId) {
@@ -378,16 +368,3 @@ function stopAutoplay(sliderId) {
         config.interval = null;
     }
 }
-
-document.addEventListener('keydown', function(e) {
-    const activeSlider = document.querySelector('.project-images-slider:hover');
-    if (!activeSlider) return;
-
-    const sliderId = activeSlider.id;
-    
-    if (e.key === 'ArrowLeft') {
-        changeSlide(sliderId, -1);
-    } else if (e.key === 'ArrowRight') {
-        changeSlide(sliderId, 1);
-    }
-});

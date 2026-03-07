@@ -2,8 +2,35 @@
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfólio de Bruno Gonçalves - Desenvolvedor .NET especialista em Clean Architecture, DDD e aplicações web modernas">
+    <meta name="keywords" content="desenvolvedor .net, clean architecture, ddd, c#, asp.net, portfolio">
+    <meta name="author" content="Bruno Gonçalves">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://brunogoncalves.dev">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Bruno Gonçalves",
+      "jobTitle": "Desenvolvedor .NET",
+      "url": "https://brunogoncalves.dev",
+      "sameAs": [
+        "https://github.com/brunogoncalves99",
+        "https://linkedin.com/in/brunogoncalves"
+      ],
+      "knowsAbout": [
+        ".NET",
+        "Clean Architecture",
+        "DDD",
+        "C#",
+        "ASP.NET Core",
+        "Entity Framework",
+        "SQL Server",
+        "React",
+        "TypeScript"
+      ]
+    }
+    </script>
     
     <title>Bruno Gonçalves | Desenvolvedor .NET</title>
     <meta name="description" content="Bruno Gonçalves - Desenvolvedor .NET com 4 anos de experiência, especialista em Clean Architecture, DDD e Microserviços. Portfólio com projetos em C#, SQL Server e arquiteturas modernas.">
@@ -401,8 +428,15 @@
         <h2 class="heading">Meus <span>Projetos</span></h2>
         <p class="projects-subtitle">Confira alguns dos projetos que desenvolvi aplicando Clean Architecture, DDD e as melhores práticas</p>
 
+        <div class="projects-filter">
+            <button class="filter-btn active" data-filter="all">Todos</button>
+            <button class="filter-btn" data-filter=".net">.NET</button>
+            <button class="filter-btn" data-filter="web">Web</button>
+            <button class="filter-btn" data-filter="fullstack">Full Stack</button>
+        </div>
+
         <div class="projects-container">
-            <div class="project-card">
+            <div class="project-card .net fullstack" data-category=".net fullstack">
                 <div class="project-badges">
                     <span class="badge badge-featured">⭐ Destaque</span>
                     <span class="badge badge-complete">✓ Completo</span>
@@ -481,7 +515,7 @@
                 </div>
             </div>
 
-            <div class="project-card">
+            <div class="project-card .net fullstack" data-category=".net fullstack">
                 <div class="project-badges">
                     <span class="badge badge-featured">⭐ Destaque</span>
                     <span class="badge badge-complete">✓ Completo</span>
@@ -560,7 +594,7 @@
                 </div>
             </div>
 
-            <div class="project-card">
+            <div class="project-card web fullstack" data-category="web fullstack">
                 <div class="project-badges">
                     <span class="badge badge-featured">⭐ Destaque</span>
                     <span class="badge badge-complete">✓ Completo</span>
@@ -637,7 +671,7 @@
                 </div>
             </div>
 
-            <div class="project-card">
+            <div class="project-card .net" data-category=".net">
                 <div class="project-badges">
                     <span class="badge badge-featured">⭐ Destaque</span>
                     <span class="badge badge-development">🔄 Em Desenvolvimento</span>
@@ -818,6 +852,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="src/js/script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <!-- Analytics script removed temporarily to debug syntax error -->
     <script>
         document.getElementById('year').textContent = new Date().getFullYear();
     </script>
