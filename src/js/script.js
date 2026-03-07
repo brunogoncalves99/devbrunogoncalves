@@ -9,6 +9,14 @@ menuIcon.onclick = () => {
 let sections = document.querySelectorAll('section');
 let navLinks = document.querySelectorAll('header nav a');
 
+// close mobile menu when a navigation link is clicked
+navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        menuIcon.classList.remove('bx-x');
+        navbar.classList.remove('active');
+    });
+});
+
 window.onscroll = () => {
     sections.forEach(sec => {
         let top = window.scrollY;
@@ -31,6 +39,40 @@ window.onscroll = () => {
     menuIcon.classList.remove('bx-x');
     navbar.classList.remove('active');
 };
+
+// ===== utility functions =====
+function updateFooterYear() {
+    const yearEl = document.getElementById('year');
+    if (yearEl) yearEl.textContent = new Date().getFullYear();
+}
+
+function applyTheme(theme) {
+    if (theme === 'light') document.body.classList.add('light-mode');
+    else document.body.classList.remove('light-mode');
+    const icon = document.querySelector('#theme-toggle i');
+    if (icon) icon.className = theme === 'light' ? 'bx bx-sun' : 'bx bx-moon';
+    // update mobile browser theme color meta
+    const meta = document.querySelector('meta[name="theme-color"]');
+    if (meta) meta.setAttribute('content', theme === 'light' ? '#ffffff' : '#0ef');
+    localStorage.setItem('theme', theme);
+}
+
+function toggleTheme() {
+    const current = document.body.classList.contains('light-mode') ? 'light' : 'dark';
+    applyTheme(current === 'light' ? 'dark' : 'light');
+}
+
+function setupThemeToggle() {
+    const btn = document.getElementById('theme-toggle');
+    if (!btn) return;
+    btn.addEventListener('click', toggleTheme);
+    const stored = localStorage.getItem('theme');
+    if (stored) applyTheme(stored);
+    else {
+        const prefers = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+        applyTheme(prefers);
+    }
+}
 
 
 ScrollReveal({
@@ -103,6 +145,99 @@ document.addEventListener('DOMContentLoaded', function() {
     Object.keys(projectSliders).forEach(sliderId => {
         initializeSlider(sliderId);
     });
+    updateFooterYear();
+    setupThemeToggle();
+
+    const pre = document.getElementById('preloader');
+    if (pre) {
+        pre.style.opacity = 0;
+        setTimeout(() => pre.remove(), 600);
+    }
+
+    if (window.Typed) {
+        new Typed('#typed', {
+            strings: ['Desenvolvedor .NET', 'Especialista em Clean Architecture', 'Apaixonado por Programação'],
+            typeSpeed: 60,
+            backSpeed: 30,
+            backDelay: 1500,
+            loop: true
+        });
+    }
+
+    const scrollBtn = document.getElementById('scroll-top');
+    window.addEventListener('scroll', () => {
+        if (scrollBtn) {
+            if (window.scrollY > 400) scrollBtn.classList.add('show');
+            else scrollBtn.classList.remove('show');
+        }
+    });
+    if (scrollBtn) {
+        scrollBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+    }
+
+    document.querySelectorAll('.project-card').forEach(card => {
+        card.addEventListener('mousemove', e => {
+            const rect = card.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            const cx = rect.width / 2;
+            const cy = rect.height / 2;
+            const dx = (x - cx) / cx;
+            const dy = (y - cy) / cy;
+            card.style.transform = `rotateY(${dx * 10}deg) rotateX(${ -dy * 10}deg)`;
+        });
+        card.addEventListener('mouseleave', () => {
+            card.style.transform = '';
+        });
+    });
+
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('/src/js/sw.js')
+          .then(reg => console.log('SW registered'))
+          .catch(err => console.log('SW registration failed', err));
+    }
+
+    const contactForm = document.getElementById('contact-form');
+    const feedback = document.getElementById('form-feedback');
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const message = document.getElementById('message').value.trim();
+
+            if (!name || !email || !message) {
+                showFeedback('Por favor, preencha todos os campos.', 'error');
+                return;
+            }
+
+            if (!/\S+@\S+\.\S+/.test(email)) {
+                showFeedback('E-mail inválido.', 'error');
+                return;
+            }
+
+            emailjs.init('_t7v6N_HcOIQP2GCQ'); 
+            emailjs.send('service_w9p7k19', 'template_vrrftrw', {
+                from_name: name,
+                from_email: email,
+                message: message,
+                to_name: 'Bruno Gonçalves'
+            })
+            .then(() => {
+                showFeedback('Mensagem enviada com sucesso!', 'success');
+                contactForm.reset();
+            })
+            .catch(() => {
+                showFeedback('Erro ao enviar mensagem. Tente novamente.', 'error');
+            });
+        });
+    }
+
+    function showFeedback(message, type) {
+        feedback.textContent = message;
+        feedback.className = `form-feedback ${type}`;
+        setTimeout(() => feedback.textContent = '', 5000);
+    }
 });
 
 function initializeSlider(sliderId) {
@@ -116,7 +251,8 @@ function initializeSlider(sliderId) {
     config.images.forEach((imageSrc, index) => {
         const img = document.createElement('img');
         img.src = imageSrc;
-        img.alt = `Screenshot ${index + 1}`;
+        img.loading = 'lazy';
+        img.alt = `Screenshot ${index + 1} - ${sliderId.replace('-slider','')}`;
         img.classList.add('slider-image');
         if (index === 0) img.classList.add('active');
         

@@ -6,20 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <title>Bruno Gonçalves | Desenvolvedor .NET</title>
-    <meta name="description" content="Bruno Gonçalves - Desenvolvedor .NET com 5 anos de experiência, especializado em Clean Architecture, DDD e Microserviços. Portfólio com projetos completos em C#, SQL Server e arquiteturas modernas.">
-    <meta name="keywords" content="desenvolvedor .net, clean architecture, ddd, C#, sql server, asp.net core, Bruno Gonçalves, backend developer, rio de janeiro rj, desenvolvedor backend, microservices">
+    <meta name="description" content="Bruno Gonçalves - Desenvolvedor .NET com 4 anos de experiência, especialista em Clean Architecture, DDD e Microserviços. Portfólio com projetos em C#, SQL Server e arquiteturas modernas.">
+    <meta name="keywords" content="desenvolvedor .NET, clean architecture, ddd, C#, sql server, asp.net core, Bruno Gonçalves, backend developer, rio de janeiro rj, desenvolvedor backend, microservices">
     <meta name="author" content="Bruno Gonçalves">
     
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://brunogoncalves.dev/">
     <meta property="og:title" content="Bruno Gonçalves | Desenvolvedor .NET | Clean Architecture & DDD">
-    <meta property="og:description" content="Desenvolvedor .NET especializado em Clean Architecture, DDD e Microserviços. Confira meu portfólio com projetos completos!">
+    <meta property="og:description" content="Desenvolvedor .NET especialista em Clean Architecture, DDD e Microserviços. Veja meu portfólio com projetos realistas!">
     <meta property="og:image" content="https://brunogoncalves.dev/src/images/og-preview.jpg">
     
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://brunogoncalves.dev/">
     <meta property="twitter:title" content="Bruno Gonçalves | Desenvolvedor .NET">
-    <meta property="twitter:description" content="Desenvolvedor .NET especializado em Clean Architecture, DDD e Microserviços.">
+    <meta property="twitter:description" content="Desenvolvedor .NET especialista em Clean Architecture, DDD e Microserviços.">
     <meta property="twitter:image" content="https://brunogoncalves.dev/src/images/og-preview.jpg">
 
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
@@ -32,23 +32,29 @@
       href="src/images/html_code.png"
       type="image/x-icon"
     />
+    <meta name="theme-color" content="#0ef">
 </head>
 
 
 <body>
 
+    <!-- preloader overlay -->
+    <div id="preloader">
+        <div class="spinner"></div>
+    </div>
+
     <header class="header">
-        <a href="#" class="logo">Portifólio</a>
+        <a href="#" class="logo">Portfólio</a>
 
         <i class="bx bx-menu" id="menu-icon"></i>
 
         <nav class="navbar">
-            <a href="#home" class="active">Home</a>
-            <a href="#about">Sobre</a>
-            <a href="#experience">Experiência</a>
-            <a href="#skills">Conhecimento</a>
-            <a href="#projects">Projetos</a>
-            <a href="#contact">Contato</a>
+            <a href="#home" class="active" aria-label="Ir para Home">Home</a>
+            <a href="#about" aria-label="Ir para Sobre">Sobre</a>
+            <a href="#experience" aria-label="Ir para Experiência">Experiência</a>
+            <a href="#skills" aria-label="Ir para Conhecimento">Conhecimento</a>
+            <a href="#projects" aria-label="Ir para Projetos">Projetos</a>
+            <a href="#contact" aria-label="Ir para Contato">Contato</a>
         </nav>
 
         <div class="social-media">
@@ -57,13 +63,16 @@
             <a href="https://www.instagram.com/bruno.goncalves99" target="_blank"><i class="bx bxl-instagram-alt"></i></a>
             <a href="https://www.linkedin.com/in/brunogoncalveslemos" target="_blank"><i class="bx bxl-linkedin"></i></a>
         </div>
+        <button id="theme-toggle" class="theme-toggle" aria-label="Alternar tema">
+            <i class='bx bx-moon'></i>
+        </button>
     </header>
 
     <section class="home section-offset" id="home">
         <div class="home-content">
             <h3>Olá, meu nome é</h3>
             <h1>Bruno Gonçalves</h1>
-            <h3>E eu sou um <span>Desenvolvedor .NET</span></h3>
+            <h3>E eu sou um <span id="typed"></span></h3>
             
             <div class="status-container">
                 <div class="work-preferences">
@@ -72,15 +81,11 @@
                 </div>
             </div>
             
-            <p> Sou um profissional graduado em Sistema de Informação com 4 anos de experiência sólida em desenvolvimento
-                 de software. Tenho expertise nas tecnologias .NET, C# e SQL Server, com forte atuação na criação e manutenção de APIs, 
-                 queries e procedures. Possuo conhecimento em ferramentas de versionamento Git e gerencio o ciclo completo de desenvolvimento de aplicações robustas. 
-                 Sou apaixonado por programação e busco uma posição desafiadora onde possa aplicar meu conhecimento técnico para contribuir com soluções inovadoras e o crescimento da equipe.
-            </p>
+            <p>Sou graduado em Sistemas de Informação e tenho 4 anos de experiência em desenvolvimento de software. Tenho trabalhado com .NET, C# e SQL Server na criação e manutenção de APIs, queries e procedures. Tenho familiaridade com Git e gerencio todo o ciclo de desenvolvimento de aplicações robustas. Sou apaixonado por programação e procuro um desafio onde possa aplicar meu conhecimento técnico para contribuir com soluções inovadoras e com o crescimento da equipe.</p>
         </div>
             
         <div class="home-img">
-            <img src="src/images/backend.gif" alt="developer image" style="width: auto; height: 300px;">
+            <img src="src/images/backend.gif" alt="Animação de desenvolvedor escrevendo código" loading="lazy" style="width: auto; height: 300px;">
         </div>
 
     </section>
@@ -88,7 +93,7 @@
     <section class="about" id="about">
         <div class="home-img">
             <div class="hexagon">
-                <img src="src/images/ImagePerfil.jpg" alt="" width="100px" height="300px">
+                <img src="src/images/ImagePerfil.jpg" alt="Foto de perfil de Bruno Gonçalves" loading="lazy" width="100px" height="300px">
             </div>
         </div>
 
@@ -115,7 +120,7 @@
                 </p>
                 <p>
                     🎯 <strong>Próximo passo:</strong> Busco contribuir em times que valorizam qualidade técnica e excelência em 
-                    software, onde possa aplicar padrões modernos (DDD, CQRS, Microserviços) e continuar evoluindo como desenvolvedor .Net.
+                    software, onde possa aplicar padrões modernos (DDD, CQRS, Microserviços) e continuar evoluindo como desenvolvedor .NET.
                 </p>
             </div>
 
@@ -163,7 +168,7 @@
         <div class="experience-container">
             <div class="experience-item">
                 <div class="experience-header">
-                    <h3>Desenvolvedor .Net Pleno</h3>
+                    <h3>Desenvolvedor .NET Pleno</h3>
                     <span class="experience-company">MSA TEC | fev 2026 - Presente</span>
                     <span class="experience-location">Rio de Janeiro, RJ • Remoto</span>
                 </div>
@@ -183,7 +188,7 @@
 
             <div class="experience-item">
                 <div class="experience-header">
-                    <h3>Desenvolvedor .Net</h3>
+                    <h3>Desenvolvedor .NET</h3>
                     <span class="experience-company">Woli | jan 2022 - nov 2025</span>
                     <span class="experience-location">Araxá, MG • Remoto</span>
                 </div>
@@ -746,29 +751,45 @@
       <h2 class="heading">Fale <span>Comigo</span></h2>
 
       <div class="contact-container">
-        <div class="contact-box">
-          <a href="mailto:bruno.goncalves1999@hotmail.com" class="contact-link" target="_blank">
-            <i class="bx bxs-envelope"></i>
-            <span>bruno.goncalves1999@hotmail.com</span>
-          </a>
-        </div>
+        <form id="contact-form" class="contact-form">
+          <div class="form-group">
+            <input type="text" id="name" name="name" placeholder="Seu Nome" required>
+          </div>
+          <div class="form-group">
+            <input type="email" id="email" name="email" placeholder="Seu E-mail" required>
+          </div>
+          <div class="form-group">
+            <textarea id="message" name="message" placeholder="Sua Mensagem" rows="5" required></textarea>
+          </div>
+          <button type="submit" class="btn">Enviar Mensagem</button>
+          <div id="form-feedback" class="form-feedback"></div>
+        </form>
 
-        <div class="contact-box">
-          <a href="tel:+5534991420974" class="contact-link">
-            <i class="bx bxs-phone"></i>
-            <span>+55 34 99142-0974</span>
-          </a>
-        </div>
+        <div class="contact-info">
+          <div class="contact-box">
+            <a href="mailto:bruno.goncalves1999@hotmail.com" class="contact-link" target="_blank">
+              <i class="bx bxs-envelope"></i>
+              <span>bruno.goncalves1999@hotmail.com</span>
+            </a>
+          </div>
 
-        <div class="contact-box">
-          <a
-            href="https://wa.me/5534991420974?text=Ol%C3%A1%20Bruno%2C%20vim%20pelo%20portif%C3%B3lio."
-            class="contact-link"
-            target="_blank"
-          >
-            <i class="bx bxl-whatsapp"></i>
-            <span>WhatsApp</span>
-          </a>
+          <div class="contact-box">
+            <a href="tel:+5534991420974" class="contact-link">
+              <i class="bx bxs-phone"></i>
+              <span>+55 34 99142-0974</span>
+            </a>
+          </div>
+
+          <div class="contact-box">
+            <a
+              href="https://wa.me/5534991420974?text=Ol%C3%A1%20Bruno%2C%20vim%20pelo%20portf%C3%B3lio."
+              class="contact-link"
+              target="_blank"
+            >
+              <i class="bx bxl-whatsapp"></i>
+              <span>WhatsApp</span>
+            </a>
+          </div>
         </div>
       </div>
 
@@ -776,7 +797,7 @@
 
     <footer class="footer">
         <div class="footer-text">
-            <p>Copyright &copy; 2025 by Bruno Gonçalves | Todos os direitos reservados.</p>
+            <p>&copy; <span id="year"></span> by Bruno Gonçalves | Todos os direitos reservados.</p>
         </div>
 
         <div class="footer-iconTop">
@@ -784,9 +805,20 @@
         </div>
     </footer>
 
+    <a href="https://wa.me/5534991420974?text=Ol%C3%A1%20Bruno%2C%20vim%20pelo%20portif%C3%B3lio." class="floating-whatsapp" target="_blank" aria-label="WhatsApp">
+        <i class='bx bxl-whatsapp'></i>
+    </a>
+    <button id="scroll-top" class="scroll-top" aria-label="Ir para o topo">
+        <i class='bx bx-up-arrow-alt'></i>
+    </button>
+
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-    <script src="src/js/script.js"></script>
+    <script src="src/js/script.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
 </body>
 
 </html>
