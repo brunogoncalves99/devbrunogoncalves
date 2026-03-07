@@ -17,6 +17,36 @@ navLinks.forEach(link => {
     });
 });
 
+const projectSliders = {
+    'churrasquinho-slider': {
+        images: Array.from({length: 17}, (_, i) => `./src/images/Churrasquinho/${i + 1}.png`),
+        currentIndex: 0,
+        interval: null,
+        autoplayDelay: 2000 
+    },
+    
+    'minibiblioteca-slider': {
+        images: Array.from({length: 9}, (_, i) => `./src/images/MiniBiblioteca/${i + 1}.jpg`),
+        currentIndex: 0,
+        interval: null,
+        autoplayDelay: 2000 
+    },
+    
+    'miniecommerce-slider': {
+        images: Array.from({length: 6}, (_, i) => `./src/images/MiniEcommerce/${i + 1}.jpg`),
+        currentIndex: 0,
+        interval: null,
+        autoplayDelay: 2000 
+    },
+
+    'financeiro-slider': {
+        images: Array.from({length: 7}, (_, i) => `./src/images/SistemaFinanceiroMonitor/${i + 1}.png`),
+        currentIndex: 0,
+        interval: null,
+        autoplayDelay: 2000 
+    }
+};
+
 window.onscroll = () => {
     sections.forEach(sec => {
         let top = window.scrollY;
@@ -111,6 +141,7 @@ ScrollReveal().reveal('.view-more', {
 });
 
     // gsap animations if available
+    /*
     if (window.gsap) {
         gsap.registerPlugin(ScrollTrigger);
 
@@ -152,36 +183,16 @@ ScrollReveal().reveal('.view-more', {
             }
         });
     }
-        interval: null,
-        autoplayDelay: 2000 
-    },
-    
-    'minibiblioteca-slider': {
-        images: Array.from({length: 9}, (_, i) => `src/images/MiniBiblioteca/${i + 1}.jpg`),
-        currentIndex: 0,
-        interval: null,
-        autoplayDelay: 2000 
-    },
-    
-    'miniecommerce-slider': {
-        images: Array.from({length: 6}, (_, i) => `src/images/MiniEcommerce/${i + 1}.jpg`),
-        currentIndex: 0,
-        interval: null,
-        autoplayDelay: 2000 
-    },
-
-    'financeiro-slider': {
-        images: Array.from({length: 7}, (_, i) => `src/images/SistemaFinanceiroMonitor/${i + 1}.png`),
-        currentIndex: 0,
-        interval: null,
-        autoplayDelay: 2000 
-    }
-};
+    */
 
 document.addEventListener('DOMContentLoaded', function() {
-    Object.keys(projectSliders).forEach(sliderId => {
-        initializeSlider(sliderId);
-    });
+    try {
+        Object.keys(projectSliders).forEach(sliderId => {
+            initializeSlider(sliderId);
+        });
+    } catch (error) {
+        console.error('Error initializing sliders:', error);
+    }
     updateFooterYear();
     setupThemeToggle();
 
@@ -228,11 +239,14 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
+    // register service worker for caching
+    /*
     if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('/src/js/sw.js')
+        navigator.serviceWorker.register('./src/js/sw.js')
           .then(reg => console.log('SW registered'))
           .catch(err => console.log('SW registration failed', err));
     }
+    */
 
     const contactForm = document.getElementById('contact-form');
     const feedback = document.getElementById('form-feedback');
