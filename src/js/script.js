@@ -110,11 +110,48 @@ ScrollReveal().reveal('.view-more', {
     delay: 400
 });
 
+    // gsap animations if available
+    if (window.gsap) {
+        gsap.registerPlugin(ScrollTrigger);
 
-const projectSliders = {
-    'churrasquinho-slider': {
-        images: Array.from({length: 17}, (_, i) => `src/images/Churrasquinho/${i + 1}.png`),
-        currentIndex: 0,
+        // fade in each section on scroll
+        gsap.utils.toArray('section').forEach(sec => {
+            gsap.from(sec, {
+                opacity: 0,
+                y: 30,
+                duration: 0.8,
+                scrollTrigger: {
+                    trigger: sec,
+                    start: 'top 80%',
+                    toggleActions: 'play none none none'
+                }
+            });
+        });
+
+        // hero image parallax
+        gsap.to('.home-img', {
+            y: 50,
+            ease: 'none',
+            scrollTrigger: {
+                trigger: '.home',
+                start: 'top top',
+                end: 'bottom top',
+                scrub: true
+            }
+        });
+
+        // stagger project cards entrance
+        gsap.from('.project-card', {
+            opacity: 0,
+            y: 20,
+            duration: 0.6,
+            stagger: 0.15,
+            scrollTrigger: {
+                trigger: '.projects',
+                start: 'top 75%'
+            }
+        });
+    }
         interval: null,
         autoplayDelay: 2000 
     },
@@ -216,7 +253,13 @@ document.addEventListener('DOMContentLoaded', function() {
                 return;
             }
 
-            emailjs.init('_t7v6N_HcOIQP2GCQ'); 
+            if (!/\S+@\S+\.\S+/.test(email)) {
+                showFeedback('E-mail inválido.', 'error');
+                return;
+            }
+
+            // EmailJS config (mantive suas chaves atuais)
+            emailjs.init('_t7v6N_HcOIQP2GCQ');
             emailjs.send('service_w9p7k19', 'template_vrrftrw', {
                 from_name: name,
                 from_email: email,
