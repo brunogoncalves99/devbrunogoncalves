@@ -259,17 +259,23 @@ function setupProjectFilters() {
 
     filterButtons.forEach(button => {
         button.addEventListener('click', () => {
-            // update active button
-            filterButtons.forEach(btn => btn.classList.remove('active'));
+            // update active button states and ARIA attributes
+            filterButtons.forEach(btn => {
+                btn.classList.remove('active');
+                btn.setAttribute('aria-selected', 'false');
+            });
             button.classList.add('active');
+            button.setAttribute('aria-selected', 'true');
 
             const filterValue = button.getAttribute('data-filter');
 
             projectCards.forEach(card => {
                 if (filterValue === 'all' || card.classList.contains(filterValue.substring(1))) {
                     card.classList.remove('hidden');
+                    card.setAttribute('aria-hidden', 'false');
                 } else {
                     card.classList.add('hidden');
+                    card.setAttribute('aria-hidden', 'true');
                 }
             });
         });
@@ -285,9 +291,14 @@ function initializeSlider(sliderId) {
     const container = sliderElement.querySelector('.slider-container');
     const dotsContainer = sliderElement.querySelector('.slider-dots');
 
-    // add loading indicator
+    // Enhanced loading indicator with skeleton
     const loading = document.createElement('div');
     loading.className = 'slider-loading';
+    loading.innerHTML = `
+        <div style="text-align: center; color: var(--text-color);">
+            <div style="font-size: 14px; margin-bottom: 8px;">Carregando imagens...</div>
+        </div>
+    `;
     container.appendChild(loading);
 
     let loadedImages = 0;

@@ -426,30 +426,30 @@
         <h2 class="heading">Meus <span>Projetos</span></h2>
         <p class="projects-subtitle">Confira alguns dos projetos que desenvolvi aplicando Clean Architecture, DDD e as melhores práticas</p>
 
-        <div class="projects-filter">
-            <button class="filter-btn active" data-filter="all">Todos</button>
-            <button class="filter-btn" data-filter=".net">.NET</button>
-            <button class="filter-btn" data-filter="web">Web</button>
-            <button class="filter-btn" data-filter="fullstack">Full Stack</button>
+        <div class="projects-filter" role="tablist" aria-label="Filtrar projetos por categoria">
+            <button class="filter-btn active" data-filter="all" role="tab" aria-selected="true" aria-label="Mostrar todos os projetos">Todos</button>
+            <button class="filter-btn" data-filter=".net" role="tab" aria-selected="false" aria-label="Mostrar projetos .NET">.NET</button>
+            <button class="filter-btn" data-filter="web" role="tab" aria-selected="false" aria-label="Mostrar projetos web">Web</button>
+            <button class="filter-btn" data-filter="fullstack" role="tab" aria-selected="false" aria-label="Mostrar projetos full stack">Full Stack</button>
         </div>
 
         <div class="projects-container">
-            <div class="project-card .net fullstack" data-category=".net fullstack">
+            <div class="project-card .net fullstack" data-category=".net fullstack"> aria-hidden="false"
                 <div class="project-badges">
                     <span class="badge badge-featured">⭐ Destaque</span>
                     <span class="badge badge-complete">✓ Completo</span>
                     <span class="badge badge-production">🚀 Production-Ready</span>
                 </div>
 
-                <div class="project-images-slider" id="churrasquinho-slider">
+                <div class="project-images-slider" id="churrasquinho-slider" role="region" aria-label="Slider de screenshots do Sistema de Churrascaria">
                     <div class="slider-container">
                     </div>
-                    <div class="slider-dots" id="churrasquinho-dots">
+                    <div class="slider-dots" id="churrasquinho-dots" role="tablist" aria-label="Indicadores de slide">
                     </div>
-                    <button class="slider-nav prev" onclick="changeSlide('churrasquinho-slider', -1)">
+                    <button class="slider-nav prev" onclick="changeSlide('churrasquinho-slider', -1)" aria-label="Imagem anterior do Sistema de Churrascaria">
                         <i class='bx bx-chevron-left'></i>
                     </button>
-                    <button class="slider-nav next" onclick="changeSlide('churrasquinho-slider', 1)">
+                    <button class="slider-nav next" onclick="changeSlide('churrasquinho-slider', 1)" aria-label="Próxima imagem do Sistema de Churrascaria">
                         <i class='bx bx-chevron-right'></i>
                     </button>
                 </div>
@@ -513,19 +513,19 @@
                 </div>
             </div>
 
-            <div class="project-card .net fullstack" data-category=".net fullstack">
+            <div class="project-card .net fullstack" data-category=".net fullstack"> aria-hidden="false"
                 <div class="project-badges">
                     <span class="badge badge-featured">⭐ Destaque</span>
                     <span class="badge badge-complete">✓ Completo</span>
                 </div>
 
-                <div class="project-images-slider" id="minibiblioteca-slider">
+                <div class="project-images-slider" id="minibiblioteca-slider" role="region" aria-label="Slider de screenshots do Mini-Biblioteca">
                     <div class="slider-container"></div>
-                    <div class="slider-dots" id="minibiblioteca-dots"></div>
-                    <button class="slider-nav prev" onclick="changeSlide('minibiblioteca-slider', -1)">
+                    <div class="slider-dots" id="minibiblioteca-dots" role="tablist" aria-label="Indicadores de slide"></div>
+                    <button class="slider-nav prev" onclick="changeSlide('minibiblioteca-slider', -1)" aria-label="Imagem anterior do Mini-Biblioteca">
                         <i class='bx bx-chevron-left'></i>
                     </button>
-                    <button class="slider-nav next" onclick="changeSlide('minibiblioteca-slider', 1)">
+                    <button class="slider-nav next" onclick="changeSlide('minibiblioteca-slider', 1)" aria-label="Próxima imagem do Mini-Biblioteca">
                         <i class='bx bx-chevron-right'></i>
                     </button>
                 </div>
@@ -592,19 +592,19 @@
                 </div>
             </div>
 
-            <div class="project-card web fullstack" data-category="web fullstack">
+            <div class="project-card web fullstack" data-category="web fullstack"> aria-hidden="false"
                 <div class="project-badges">
                     <span class="badge badge-featured">⭐ Destaque</span>
                     <span class="badge badge-complete">✓ Completo</span>
                 </div>
 
-                <div class="project-images-slider" id="miniecommerce-slider">
+                <div class="project-images-slider" id="miniecommerce-slider" role="region" aria-label="Slider de screenshots do Mini-Ecommerce">
                     <div class="slider-container"></div>
-                    <div class="slider-dots" id="miniecommerce-dots"></div>
-                    <button class="slider-nav prev" onclick="changeSlide('miniecommerce-slider', -1)">
+                    <div class="slider-dots" id="miniecommerce-dots" role="tablist" aria-label="Indicadores de slide"></div>
+                    <button class="slider-nav prev" onclick="changeSlide('miniecommerce-slider', -1)" aria-label="Imagem anterior do Mini-Ecommerce">
                         <i class='bx bx-chevron-left'></i>
                     </button>
-                    <button class="slider-nav next" onclick="changeSlide('miniecommerce-slider', 1)">
+                    <button class="slider-nav next" onclick="changeSlide('miniecommerce-slider', 1)" aria-label="Próxima imagem do Mini-Ecommerce">
                         <i class='bx bx-chevron-right'></i>
                     </button>
                 </div>
@@ -669,20 +669,20 @@
                 </div>
             </div>
 
-            <div class="project-card .net" data-category=".net">
+            <div class="project-card .net" data-category=".net"> aria-hidden="false"
                 <div class="project-badges">
                     <span class="badge badge-featured">⭐ Destaque</span>
                     <span class="badge badge-development">🔄 Em Desenvolvimento</span>
                 </div>
-                <div class="project-images-slider" id="financeiro-slider">
+                <div class="project-images-slider" id="financeiro-slider" role="region" aria-label="Slider de screenshots do Sistema Financeiro Monitor">
                     <div class="slider-container">
                     </div>
-                    <div class="slider-dots" id="financeiro-dots">
+                    <div class="slider-dots" id="financeiro-dots" role="tablist" aria-label="Indicadores de slide">
                     </div>
-                    <button class="slider-nav prev" onclick="changeSlide('financeiro-slider', -1)">
+                    <button class="slider-nav prev" onclick="changeSlide('financeiro-slider', -1)" aria-label="Imagem anterior do Sistema Financeiro Monitor">
                         <i class='bx bx-chevron-left'></i>
                     </button>
-                    <button class="slider-nav next" onclick="changeSlide('financeiro-slider', 1)">
+                    <button class="slider-nav next" onclick="changeSlide('financeiro-slider', 1)" aria-label="Próxima imagem do Sistema Financeiro Monitor">
                         <i class='bx bx-chevron-right'></i>
                     </button>
                 </div>
@@ -747,7 +747,7 @@
             </div>
 
             <div class="project-card coming-soon">
-                <div class="project-icon">
+                <div class="project-icon"> aria-hidden="false"
                     <i class='bx bx-code-alt'></i>
                 </div>
                 <div class="project-content">
