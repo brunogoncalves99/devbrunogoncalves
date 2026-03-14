@@ -360,11 +360,27 @@ section {
 
 .home {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    gap: 3rem;
     background: linear-gradient(45deg, var(--main-color), var(--secondary-color), var(--main-color));
     background-size: 400% 400%;
     animation: gradientBG 20s ease infinite;
+}
+
+.home-content {
+    flex: 1 1 45rem;
+    max-width: 90;
+    min-width: 34rem;
+    padding: 2.5rem;
+    background: rgba(0, 0, 0, 0.25);
+    border-radius: 1.5rem;
+}
+
+.home-img {
+    flex: 1 1 30rem;
+    max-width: 38rem;
 }
 
 @keyframes gradientBG {
@@ -433,6 +449,12 @@ section {
     padding-top: 120px; 
   }
 
+  .home-content {
+    max-width: 100%;
+    min-width: auto;
+    padding: 1.8rem;
+  }
+
   .home-content h1 {
     font-size: 3.8rem; 
   }
@@ -444,12 +466,6 @@ section {
   .home-content p {
     font-size: 1.4rem;
   }
-}
-
-.home-content {
-    background: rgba(0, 0, 0, 0.25);
-    padding: 2rem;
-    border-radius: 1.5rem;
 }
 
 .home-content h3 {

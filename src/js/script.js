@@ -181,9 +181,20 @@ function initializeTyped() {
     if (!window.Typed) return;
     
     const typedElement = document.getElementById('typed');
-    if (typedElement && typedElement._typed) {
+    if (!typedElement) return;
+
+    // Remove any existing Typed.js instance + leftover cursor elements
+    if (typedElement._typed) {
         typedElement._typed.destroy();
     }
+
+    const previousCursor = typedElement.parentElement?.querySelector('.typed-cursor');
+    if (previousCursor) {
+        previousCursor.remove();
+    }
+
+    // Ensure we start from a clean state (no partial text when switching languages)
+    typedElement.textContent = '';
     
     const defaultTypedStrings = [
         'Desenvolvedor .NET',
@@ -203,7 +214,11 @@ function initializeTyped() {
         typeSpeed: 60,
         backSpeed: 30,
         backDelay: 1500,
-        loop: true
+        loop: true,
+        showCursor: false,
+        smartBackspace: true,
+        fadeOut: true,
+        fadeOutDelay: 300
     });
 }
 
