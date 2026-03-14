@@ -1,0 +1,620 @@
+{
+  "pt": {
+    "nav": {
+      "home": "Início",
+      "about": "Sobre",
+      "services": "Serviços",
+      "projects": "Projetos",
+      "skills": "Habilidades",
+      "experience": "Experiência",
+      "contact": "Contato"
+    },
+    "hero": {
+      "greeting": "Olá, eu sou",
+      "name": "Bruno Gonçalves",
+      "title": "Desenvolvedor .NET",
+      "subtitle": "Especialista em Clean Architecture, DDD e aplicações web modernas",
+      "description": "Desenvolvedor .NET com 4 anos de experiência, apaixonado por criar soluções robustas e escaláveis usando as melhores práticas da indústria.",
+      "cv": "Baixar CV",
+      "contact": "Vamos Conversar"
+    },
+    "about": {
+      "title": "Sobre <span>Mim</span>",
+      "subtitle": "Minha Introdução",
+      "description": "Sou um desenvolvedor .NET apaixonado por tecnologia, com foco em criar aplicações robustas e escaláveis. Especialista em Clean Architecture e Domain-Driven Design, sempre buscando as melhores práticas da indústria.",
+      "story1": "👨‍🔧 <strong>De técnico a desenvolvedor:</strong> Iniciei minha trajetória na área de manutenção industrial, onde aprendi a resolver problemas complexos sob pressão e trabalhar com sistemas críticos. Essa experiência me ensinou a pensar sistemicamente - habilidade que hoje aplico diariamente em arquitetura de software.",
+      "story2": "💻 <strong>Hoje:</strong> Desenvolvedor .NET com 4 anos de experiência, evoluindo de .NET Framework 4.8/MVC para arquiteturas modernas com <strong>.NET 10</strong>, <strong>Clean Architecture</strong> e <strong>DDD</strong>. Apaixonado por código limpo, padrões de projeto e arquiteturas escaláveis.",
+      "story3": "📈 <strong>Evolução contínua:</strong> Completei minha formação técnica através do Bootcamp <strong>LocalizaLabs .NET Developer</strong> e da <strong>Formação ASP.NET Core Expert</strong> (desenvolvedor.io - Eduardo Pires), evoluindo de desenvolvedor .NET tradicional para <strong>especialista em arquiteturas modernas</strong>, com domínio prático de <strong>Clean Architecture</strong>, <strong>DDD</strong> e <strong>Microserviços</strong>.",
+      "story4": "🎯 <strong>Próximo passo:</strong> Busco contribuir em times que valorizam qualidade técnica e excelência em software, onde possa aplicar padrões modernos (DDD, CQRS, Microserviços) e continuar evoluindo como desenvolvedor .NET.",
+      "commits": "Commits GitHub",
+      "lines": "Linhas de Código",
+      "experience": "4+ Anos de Experiência",
+      "projects": "Projetos Completados",
+      "companies": "Empresas Atendidas"
+    },
+    "services": {
+      "title": "Meus Serviços",
+      "subtitle": "O que eu ofereço",
+      "backend": {
+        "title": "Desenvolvimento Backend",
+        "description": "APIs RESTful robustas com .NET Core, seguindo princípios de Clean Architecture e DDD"
+      },
+      "database": {
+        "title": "Design de Banco de Dados",
+        "description": "Modelagem e otimização de bancos SQL Server, com foco em performance e integridade"
+      },
+      "architecture": {
+        "title": "Arquitetura de Software",
+        "description": "Soluções escaláveis usando microserviços, CQRS e padrões de design modernos"
+      }
+    },
+    "projects": {
+      "title": "Meus <span>Projetos</span>",
+      "subtitle": "Confira alguns dos projetos que desenvolvi aplicando Clean Architecture, DDD e as melhores práticas",
+      "filters": {
+        "all": "Todos",
+        "net": ".NET",
+        "web": "Web",
+        "fullstack": "Full Stack"
+      },
+      "churrasquinho": {
+        "title": "Sistema de Churrascaria",
+        "description": "Sistema completo de gestão para churrascarias com controle de mesas, pedidos, cálculo automático de multas por atraso e gerenciamento de acervo. Implementado com padrões DDD e CQRS."
+      },
+      "minibiblioteca": {
+        "title": "Mini-Biblioteca",
+        "description": "Sistema de gestão de biblioteca com controle de empréstimos, devoluções, cálculo automático de multas por atraso e gerenciamento de acervo. Implementado com padrões DDD e CQRS."
+      },
+      "miniecommerce": {
+        "title": "Mini-Ecommerce",
+        "description": "Plataforma de e-commerce completa com carrinho de compras, sistema de cupons, gestão de produtos e categorias. Arquitetura escalável preparada para microserviços."
+      },
+      "financeiro": {
+        "title": "Sistema Financeiro Monitor",
+        "description": "Sistema de monitoramento de cotações de moedas e indicadores econômicos com alertas inteligentes por e-mail. Consome APIs públicas do Banco Central, processa dados em background e exibe dashboards interativos com gráficos em tempo real."
+      },
+      "comingSoon": {
+        "title": "Novos Projetos em Breve",
+        "description": "Estou constantemente desenvolvendo novos projetos para expandir meu portfólio. Acompanhe meu GitHub para ver as novidades!",
+        "followGithub": "Seguir no GitHub",
+        "viewAll": "Ver Todos os Projetos"
+      }
+    },
+    "skills": {
+      "title": "<span>Habilidades</span>",
+      "subtitle": "Meu nível técnico"
+    },
+    "experience": {
+      "title": "Experiência <span>Profissional</span>",
+      "subtitle": "Minha jornada profissional",
+      "current": "Atual",
+      "roles": {
+        "senior": "Desenvolvedor .NET Sênior",
+        "mid": "Desenvolvedor .NET Pleno",
+        "junior": "Desenvolvedor .NET Júnior"
+      },
+      "jobs": {
+        "msa": {
+          "title": "Desenvolvedor .NET Pleno",
+          "company": "MSA TEC | fev 2026 - Presente",
+          "location": "Rio de Janeiro, RJ • Remoto",
+          "description": "Atuando no desenvolvimento back-end com .NET 10 e C# 13, trabalhando com arquitetura limpa (Clean Architecture) e princípios SOLID para construção de soluções escaláveis e de fácil manutenção.",
+          "responsibilities": [
+            "Modelagem de domínio aplicando Domain-Driven Design (DDD) — entidades, agregados e objetos de valor",
+            "Desenvolvimento de aplicações web com ASP.NET Core Razor Pages",
+            "Criação e otimização de queries com NHibernate",
+            "Implementação de cache com Redis para performance da aplicação",
+            "Escrita de testes unitários e de integração com xUnit, seguindo práticas de TDD",
+            "Participação em code reviews e colaboração na evolução da arquitetura",
+            "Versionamento de código com Git"
+          ]
+        },
+        "woli": {
+          "title": "Desenvolvedor .NET",
+          "company": "Woli | jan 2022 - nov 2025",
+          "location": "Araxá, MG • Remoto",
+          "description": "Responsável pelo desenvolvimento e manutenção de sistemas web utilizando .NET, ASP.NET Core, C#, MVC, JavaScript (jQuery) e SQL Server.",
+          "responsibilities": [
+            "Desenvolvimento de novas funcionalidades para aplicações web internas e externas",
+            "Evolução e manutenção do site institucional da Woli",
+            "Criação e manutenção de APIs REST para integrações",
+            "Atuação no ciclo de desenvolvimento ágil (Scrum)",
+            "Manipulação, criação e otimização de procedures e estruturas de banco de dados no SQL Server",
+            "Levantamento de requisitos, alinhamento com clientes e estimativa de esforço técnico",
+            "Apoio técnico para outros desenvolvedores e suporte operacional"
+          ]
+        },
+        "zema": {
+          "title": "Analista de Sistema de Negócios",
+          "company": "ZEMA | jun 2021 - jan 2022",
+          "location": "Araxá, MG • Presencial",
+          "description": "Responsável pela análise de sistemas e processos relacionados aos ERPs Gemco, Protheus e Senior.",
+          "responsibilities": [
+            "Atendimento nível 2 para áreas de negócio",
+            "Levantamento de requisitos e análise de melhorias para sistemas internos",
+            "Mapeamento e modelagem de processos",
+            "Acompanhamento de projetos e validação de entregas",
+            "Consultas SQL para análise de dados e estrutura dos processos"
+          ]
+        },
+        "qualidados": {
+          "title": "Técnico de Planejamento",
+          "company": "Qualidados Engenharia | jan 2021 - jun 2021",
+          "location": "Araxá, MG • Presencial",
+          "description": "Atuação em planejamento de manutenção e suporte administrativo-operacional.",
+          "responsibilities": [
+            "Cadastro de fornecedores, criação de RCs e conferência de documentos no SAP",
+            "Controle de notas de serviços e acompanhamento de fornecedores",
+            "Criação de relatórios, levantamento de dados e apoio no planejamento de paradas de manutenção"
+          ]
+        }
+      }
+    },
+    "contact": {
+      "title": "Fale <span>Comigo</span>",
+      "subtitle": "Vamos trabalhar juntos",
+      "name": "Nome Completo",
+      "email": "Seu E-mail",
+      "message": "Sua Mensagem",
+      "send": "Enviar Mensagem",
+      "sending": "Enviando...",
+      "success": "Mensagem enviada com sucesso!",
+      "error": "Erro ao enviar mensagem. Tente novamente."
+    },
+    "footer": {
+      "copyright": "© <span id=\"year\"></span> Bruno Gonçalves. Todos os direitos reservados.",
+      "rights": "Todos os direitos reservados"
+    },
+    "typed": {
+      "strings": ["Desenvolvedor .NET", "Especialista em Clean Architecture", "Apaixonado por Programação"]
+    }
+  },
+  "en": {
+    "nav": {
+      "home": "Home",
+      "about": "About",
+      "services": "Services",
+      "projects": "Projects",
+      "skills": "Skills",
+      "experience": "Experience",
+      "contact": "Contact"
+    },
+    "hero": {
+      "greeting": "Hello, I'm",
+      "name": "Bruno Gonçalves",
+      "title": ".NET Developer",
+      "subtitle": "Specialist in Clean Architecture, DDD and modern web applications",
+      "description": ".NET Developer with 4 years of experience, passionate about creating robust and scalable solutions using industry best practices.",
+      "cv": "Download CV",
+      "contact": "Let's Talk"
+    },
+    "about": {
+      "title": "About <span>Me</span>",
+      "subtitle": "My Introduction",
+      "description": "I'm a .NET developer passionate about technology, focused on creating robust and scalable applications. Specialist in Clean Architecture and Domain-Driven Design, always seeking industry best practices.",
+      "story1": "👨‍🔧 <strong>From technician to developer:</strong> I started my career in industrial maintenance, where I learned to solve complex problems under pressure and work with critical systems. This experience taught me to think systemically - a skill I apply daily in software architecture.",
+      "story2": "💻 <strong>Today:</strong> .NET Developer with 4 years of experience, evolving from .NET Framework 4.8/MVC to modern architectures with <strong>.NET 10</strong>, <strong>Clean Architecture</strong> and <strong>DDD</strong>. Passionate about clean code, design patterns and scalable architectures.",
+      "story3": "📈 <strong>Continuous evolution:</strong> I completed my technical training through the <strong>LocalizaLabs .NET Developer</strong> Bootcamp and the <strong>ASP.NET Core Expert Training</strong> (desenvolvedor.io - Eduardo Pires), evolving from a traditional .NET developer to a <strong>modern architecture specialist</strong>, with practical mastery of <strong>Clean Architecture</strong>, <strong>DDD</strong> and <strong>Microservices</strong>.",
+      "story4": "🎯 <strong>Next step:</strong> I seek to contribute to teams that value technical quality and software excellence, where I can apply modern standards (DDD, CQRS, Microservices) and continue evolving as a .NET developer.",
+      "commits": "GitHub Commits",
+      "lines": "Lines of Code",
+      "experience": "4+ Years of Experience",
+      "projects": "Completed Projects",
+      "companies": "Companies Served"
+    },
+    "services": {
+      "title": "My Services",
+      "subtitle": "What I offer",
+      "backend": {
+        "title": "Backend Development",
+        "description": "Robust RESTful APIs with .NET Core, following Clean Architecture and DDD principles"
+      },
+      "database": {
+        "title": "Database Design",
+        "description": "SQL Server database modeling and optimization, focused on performance and integrity"
+      },
+      "architecture": {
+        "title": "Software Architecture",
+        "description": "Scalable solutions using microservices, CQRS and modern design patterns"
+      }
+    },
+    "projects": {
+      "title": "My <span>Projects</span>",
+      "subtitle": "Check out some of the projects I developed applying Clean Architecture, DDD and best practices",
+      "filters": {
+        "all": "All",
+        "net": ".NET",
+        "web": "Web",
+        "fullstack": "Full Stack"
+      },
+      "churrasquinho": {
+        "title": "Churrascaria System",
+        "description": "Complete management system for churrascarias with table control, orders, automatic fine calculation for delays and collection management. Implemented with DDD and CQRS patterns."
+      },
+      "minibiblioteca": {
+        "title": "Mini-Library",
+        "description": "Library management system with loan control, returns, automatic fine calculation for delays and collection management. Implemented with DDD and CQRS patterns."
+      },
+      "miniecommerce": {
+        "title": "Mini-Ecommerce",
+        "description": "Complete e-commerce platform with shopping cart, coupon system, product and category management. Scalable architecture prepared for microservices."
+      },
+      "financeiro": {
+        "title": "Financial System Monitor",
+        "description": "Currency quotes and economic indicators monitoring system with intelligent email alerts. Consumes Central Bank public APIs, processes data in background and displays interactive dashboards with real-time charts."
+      },
+      "comingSoon": {
+        "title": "New Projects Coming Soon",
+        "description": "I'm constantly developing new projects to expand my portfolio. Follow my GitHub to see the news!",
+        "followGithub": "Follow on GitHub",
+        "viewAll": "View All Projects"
+      }
+    },
+    "skills": {
+      "title": "<span>Skills</span>",
+      "subtitle": "My technical level",
+      "hardSkills": {
+        "title": "💻 Hard Skills",
+        "csharp": {
+          "title": "C#",
+          "description": "Backend development with C# and .NET, using best practices and design patterns."
+        },
+        "dotnet": {
+          "title": ".NET Core",
+          "description": "Creation of REST APIs, MVC applications and services with .NET Core and Entity Framework."
+        },
+        "sqlserver": {
+          "title": "SQL Server",
+          "description": "Query customizations, query optimizations, creation of procedures and tables."
+        },
+        "javascript": {
+          "title": "JavaScript",
+          "description": "DOM manipulation, events, API integration and jQuery usage."
+        },
+        "html5": {
+          "title": "HTML5",
+          "description": "Creation of semantic and accessible structures for web applications."
+        },
+        "css3": {
+          "title": "CSS3",
+          "description": "Responsive styling, animations and modern layouts with Flexbox and Grid."
+        }
+      },
+      "softSkills": {
+        "title": "🤝 Soft Skills",
+        "leadership": {
+          "title": "Technical Leadership",
+          "description": "Mentoring and guidance of junior developers with focus on technical growth."
+        },
+        "teamwork": {
+          "title": "Teamwork",
+          "description": "Collaboration with agile teams, focus on continuous deliveries and common goals."
+        },
+        "proactivity": {
+          "title": "Proactivity",
+          "description": "Constant search for solutions and improvements in processes and performance."
+        },
+        "results": {
+          "title": "Results Focus",
+          "description": "Commitment to value deliveries and quality for the end customer."
+        },
+        "learning": {
+          "title": "Continuous Learning",
+          "description": "Constant updating with new technologies, best practices and trends."
+        },
+        "communication": {
+          "title": "Communication",
+          "description": "Clarity in communication and alignment with the team to achieve joint goals."
+        }
+      }
+    },
+    "experience": {
+      "title": "Professional <span>Experience</span>",
+      "subtitle": "My professional journey",
+      "current": "Current",
+      "roles": {
+        "senior": "Senior .NET Developer",
+        "mid": "Mid-level .NET Developer",
+        "junior": "Junior .NET Developer"
+      },
+      "jobs": {
+        "msa": {
+          "title": "Mid-level .NET Developer",
+          "company": "MSA TEC | Feb 2026 - Present",
+          "location": "Rio de Janeiro, RJ • Remote",
+          "description": "Working in back-end development with .NET 10 and C# 13, working with clean architecture (Clean Architecture) and SOLID principles for building scalable and maintainable solutions.",
+          "responsibilities": [
+            "Domain modeling applying Domain-Driven Design (DDD) — entities, aggregates and value objects",
+            "Web application development with ASP.NET Core Razor Pages",
+            "Creation and optimization of queries with NHibernate",
+            "Redis cache implementation for application performance",
+            "Writing unit and integration tests with xUnit, following TDD practices",
+            "Participation in code reviews and collaboration in architecture evolution",
+            "Code versioning with Git"
+          ]
+        },
+        "woli": {
+          "title": ".NET Developer",
+          "company": "Woli | Jan 2022 - Nov 2025",
+          "location": "Araxá, MG • Remote",
+          "description": "Responsible for the development and maintenance of web systems using .NET, ASP.NET Core, C#, MVC, JavaScript (jQuery) and SQL Server.",
+          "responsibilities": [
+            "Development of new features for internal and external web applications",
+            "Evolution and maintenance of Woli's institutional website",
+            "Creation and maintenance of REST APIs for integrations",
+            "Participation in agile development cycle (Scrum)",
+            "Manipulation, creation and optimization of procedures and database structures in SQL Server",
+            "Requirements gathering, client alignment and technical effort estimation",
+            "Technical support for other developers and operational support"
+          ]
+        },
+        "zema": {
+          "title": "Business Systems Analyst",
+          "company": "ZEMA | Jun 2021 - Jan 2022",
+          "location": "Araxá, MG • On-site",
+          "description": "Responsible for the analysis of systems and processes related to Gemco, Protheus and Senior ERPs.",
+          "responsibilities": [
+            "Level 2 service for business areas",
+            "Requirements gathering and analysis of improvements for internal systems",
+            "Process mapping and modeling",
+            "Project monitoring and delivery validation",
+            "SQL queries for data analysis and process structure"
+          ]
+        },
+        "qualidados": {
+          "title": "Planning Technician",
+          "company": "Qualidados Engenharia | Jan 2021 - Jun 2021",
+          "location": "Araxá, MG • On-site",
+          "description": "Working in maintenance planning and administrative-operational support.",
+          "responsibilities": [
+            "Supplier registration, RC creation and document verification in SAP",
+            "Service notes control and supplier monitoring",
+            "Report creation, data collection and support in maintenance shutdown planning"
+          ]
+        }
+      }
+    },
+    "contact": {
+      "title": "Get In <span>Touch</span>",
+      "subtitle": "Let's work together",
+      "name": "Full Name",
+      "email": "Your Email",
+      "message": "Your Message",
+      "send": "Send Message",
+      "sending": "Sending...",
+      "success": "Message sent successfully!",
+      "error": "Error sending message. Please try again."
+    },
+    "footer": {
+      "copyright": "© <span id=\"year\"></span> Bruno Gonçalves. All rights reserved.",
+      "rights": "All rights reserved"
+    },
+    "typed": {
+      "strings": [".NET Developer", "Clean Architecture Specialist", "Programming Passionate"]
+    }
+  },
+  "es": {
+    "nav": {
+      "home": "Inicio",
+      "about": "Sobre",
+      "services": "Servicios",
+      "projects": "Proyectos",
+      "skills": "Habilidades",
+      "experience": "Experiencia",
+      "contact": "Contacto"
+    },
+    "hero": {
+      "greeting": "Hola, soy",
+      "name": "Bruno Gonçalves",
+      "title": "Desarrollador .NET",
+      "subtitle": "Especialista en Clean Architecture, DDD y aplicaciones web modernas",
+      "description": "Desarrollador .NET con 4 años de experiencia, apasionado por crear soluciones robustas y escalables utilizando las mejores prácticas de la industria.",
+      "cv": "Descargar CV",
+      "contact": "Hablemos"
+    },
+    "about": {
+      "title": "Sobre <span>Mí</span>",
+      "subtitle": "Mi Introducción",
+      "description": "Soy un desarrollador .NET apasionado por la tecnología, enfocado en crear aplicaciones robustas y escalables. Especialista en Clean Architecture y Domain-Driven Design, siempre buscando las mejores prácticas de la industria.",
+      "story1": "👨‍🔧 <strong>De técnico a desarrollador:</strong> Inicié mi trayectoria en el área de mantenimiento industrial, donde aprendí a resolver problemas complejos bajo presión y trabajar con sistemas críticos. Esta experiencia me enseñó a pensar sistémicamente - habilidad que hoy aplico diariamente en arquitectura de software.",
+      "story2": "💻 <strong>Hoy:</strong> Desarrollador .NET con 4 años de experiencia, evolucionando de .NET Framework 4.8/MVC hacia arquitecturas modernas con <strong>.NET 10</strong>, <strong>Clean Architecture</strong> y <strong>DDD</strong>. Apasionado por código limpio, patrones de diseño y arquitecturas escalables.",
+      "story3": "📈 <strong>Evolución continua:</strong> Completé mi formación técnica a través del Bootcamp <strong>LocalizaLabs .NET Developer</strong> y la <strong>Formación ASP.NET Core Expert</strong> (desenvolvedor.io - Eduardo Pires), evolucionando de desarrollador .NET tradicional hacia <strong>especialista en arquitecturas modernas</strong>, con dominio práctico de <strong>Clean Architecture</strong>, <strong>DDD</strong> y <strong>Microservicios</strong>.",
+      "story4": "🎯 <strong>Próximo paso:</strong> Busco contribuir en equipos que valoran la calidad técnica y la excelencia en software, donde pueda aplicar estándares modernos (DDD, CQRS, Microservicios) y continuar evolucionando como desarrollador .NET.",
+      "commits": "Commits GitHub",
+      "lines": "Líneas de Código",
+      "experience": "4+ Años de Experiencia",
+      "projects": "Proyectos Completados",
+      "companies": "Empresas Atendidas"
+    },
+    "services": {
+      "title": "Mis Servicios",
+      "subtitle": "Lo que ofrezco",
+      "backend": {
+        "title": "Desarrollo Backend",
+        "description": "APIs RESTful robustas con .NET Core, siguiendo principios de Clean Architecture y DDD"
+      },
+      "database": {
+        "title": "Diseño de Base de Datos",
+        "description": "Modelado y optimización de bases de datos SQL Server, enfocado en rendimiento e integridad"
+      },
+      "architecture": {
+        "title": "Arquitectura de Software",
+        "description": "Soluciones escalables utilizando microservicios, CQRS y patrones de diseño modernos"
+      }
+    },
+    "projects": {
+      "title": "Mis <span>Proyectos</span>",
+      "subtitle": "Revisa algunos de los proyectos que desarrollé aplicando Clean Architecture, DDD y las mejores prácticas",
+      "filters": {
+        "all": "Todos",
+        "net": ".NET",
+        "web": "Web",
+        "fullstack": "Full Stack"
+      },
+      "churrasquinho": {
+        "title": "Sistema de Churrascaría",
+        "description": "Sistema completo de gestión para churrascarias con control de mesas, pedidos, cálculo automático de multas por retraso y gestión de acervo. Implementado con patrones DDD y CQRS."
+      },
+      "minibiblioteca": {
+        "title": "Mini-Biblioteca",
+        "description": "Sistema de gestión de biblioteca con control de préstamos, devoluciones, cálculo automático de multas por retraso y gestión de acervo. Implementado con patrones DDD y CQRS."
+      },
+      "miniecommerce": {
+        "title": "Mini-Ecommerce",
+        "description": "Plataforma de e-commerce completa con carrito de compras, sistema de cupones, gestión de productos y categorías. Arquitectura escalable preparada para microservicios."
+      },
+      "financeiro": {
+        "title": "Sistema Monitor Financiero",
+        "description": "Sistema de monitoreo de cotizaciones de monedas e indicadores económicos con alertas inteligentes por email. Consume APIs públicas del Banco Central, procesa datos en segundo plano y muestra dashboards interactivos con gráficos en tiempo real."
+      },
+      "comingSoon": {
+        "title": "Nuevos Proyectos Próximamente",
+        "description": "Estoy constantemente desarrollando nuevos proyectos para expandir mi portafolio. ¡Sigue mi GitHub para ver las novedades!",
+        "followGithub": "Seguir en GitHub",
+        "viewAll": "Ver Todos los Proyectos"
+      }
+    },
+    "skills": {
+      "title": "<span>Habilidades</span>",
+      "subtitle": "Mi nivel técnico",
+      "hardSkills": {
+        "title": "💻 Hard Skills",
+        "csharp": {
+          "title": "C#",
+          "description": "Desarrollo backend con C# y .NET, uso de buenas prácticas y patrones de diseño."
+        },
+        "dotnet": {
+          "title": ".NET Core",
+          "description": "Creación de APIs REST, aplicaciones MVC y servicios con .NET Core y Entity Framework."
+        },
+        "sqlserver": {
+          "title": "SQL Server",
+          "description": "Personalizaciones de queries, optimizaciones de consultas, creación de procedures y tablas."
+        },
+        "javascript": {
+          "title": "JavaScript",
+          "description": "Manipulación de DOM, eventos, integración con APIs y uso de jQuery."
+        },
+        "html5": {
+          "title": "HTML5",
+          "description": "Creación de estructuras semánticas y accesibles para aplicaciones web."
+        },
+        "css3": {
+          "title": "CSS3",
+          "description": "Estilización responsiva, animaciones y layouts modernos con Flexbox y Grid."
+        }
+      },
+      "softSkills": {
+        "title": "🤝 Soft Skills",
+        "leadership": {
+          "title": "Liderazgo Técnico",
+          "description": "Mentoría y orientación de desarrolladores juniors con foco en crecimiento técnico."
+        },
+        "teamwork": {
+          "title": "Trabajo en Equipo",
+          "description": "Colaboración con equipos ágiles, foco en entregas continuas y objetivos comunes."
+        },
+        "proactivity": {
+          "title": "Proactividad",
+          "description": "Búsqueda constante de soluciones y mejoras en procesos y performance."
+        },
+        "results": {
+          "title": "Enfoque en Resultados",
+          "description": "Compromiso con entregas de valor y calidad para el cliente final."
+        },
+        "learning": {
+          "title": "Aprendizaje Continuo",
+          "description": "Actualización constante con nuevas tecnologías, buenas prácticas y tendencias."
+        },
+        "communication": {
+          "title": "Comunicación",
+          "description": "Claridad en la comunicación y alineamiento con el equipo para alcanzar metas conjuntas."
+        }
+      }
+    },
+    "experience": {
+      "title": "Experiencia <span>Profesional</span>",
+      "subtitle": "Mi trayectoria profesional",
+      "current": "Actual",
+      "roles": {
+        "senior": "Desarrollador .NET Senior",
+        "mid": "Desarrollador .NET Semi-Senior",
+        "junior": "Desarrollador .NET Junior"
+      },
+      "jobs": {
+        "msa": {
+          "title": "Desarrollador .NET Semi-Senior",
+          "company": "MSA TEC | feb 2026 - Presente",
+          "location": "Rio de Janeiro, RJ • Remoto",
+          "description": "Actuando en el desarrollo back-end con .NET 10 y C# 13, trabajando con arquitectura limpia (Clean Architecture) y principios SOLID para construcción de soluciones escalables y de fácil mantenimiento.",
+          "responsibilities": [
+            "Modelado de dominio aplicando Domain-Driven Design (DDD) — entidades, agregados y objetos de valor",
+            "Desarrollo de aplicaciones web con ASP.NET Core Razor Pages",
+            "Creación y optimización de queries con NHibernate",
+            "Implementación de cache con Redis para performance de la aplicación",
+            "Escritura de pruebas unitarias e de integración con xUnit, siguiendo prácticas de TDD",
+            "Participación en code reviews y colaboración en la evolución de la arquitectura",
+            "Versionamiento de código con Git"
+          ]
+        },
+        "woli": {
+          "title": "Desarrollador .NET",
+          "company": "Woli | ene 2022 - nov 2025",
+          "location": "Araxá, MG • Remoto",
+          "description": "Responsable del desarrollo y mantenimiento de sistemas web utilizando .NET, ASP.NET Core, C#, MVC, JavaScript (jQuery) y SQL Server.",
+          "responsibilities": [
+            "Desarrollo de nuevas funcionalidades para aplicaciones web internas y externas",
+            "Evolución y mantenimiento del sitio institucional de Woli",
+            "Creación y mantenimiento de APIs REST para integraciones",
+            "Actuación en el ciclo de desarrollo ágil (Scrum)",
+            "Manipulación, creación y optimización de procedures y estructuras de base de datos en SQL Server",
+            "Levantamiento de requisitos, alineamiento con clientes y estimación de esfuerzo técnico",
+            "Apoyo técnico para otros desarrolladores y soporte operacional"
+          ]
+        },
+        "zema": {
+          "title": "Analista de Sistema de Negócios",
+          "company": "ZEMA | jun 2021 - ene 2022",
+          "location": "Araxá, MG • Presencial",
+          "description": "Responsable del análisis de sistemas y procesos relacionados con los ERPs Gemco, Protheus y Senior.",
+          "responsibilities": [
+            "Atención nivel 2 para áreas de negocio",
+            "Levantamiento de requisitos y análisis de mejoras para sistemas internos",
+            "Mapeo y modelado de procesos",
+            "Acompañamiento de proyectos y validación de entregas",
+            "Consultas SQL para análisis de datos y estructura de los procesos"
+          ]
+        },
+        "qualidados": {
+          "title": "Técnico de Planificación",
+          "company": "Qualidados Engenharia | ene 2021 - jun 2021",
+          "location": "Araxá, MG • Presencial",
+          "description": "Actuación en planificación de mantenimiento y soporte administrativo-operacional.",
+          "responsibilities": [
+            "Registro de proveedores, creación de RCs y verificación de documentos en SAP",
+            "Control de notas de servicios y acompañamiento de proveedores",
+            "Creación de reportes, levantamiento de datos y apoyo en la planificación de paradas de mantenimiento"
+          ]
+        }
+      }
+    },
+    "contact": {
+      "title": "Ponte en <span>Contacto</span>",
+      "subtitle": "Trabajemos juntos",
+      "name": "Nombre Completo",
+      "email": "Tu Email",
+      "message": "Tu Mensaje",
+      "send": "Enviar Mensaje",
+      "sending": "Enviando...",
+      "success": "¡Mensaje enviado exitosamente!",
+      "error": "Error al enviar mensaje. Por favor intenta nuevamente."
+    },
+    "footer": {
+      "copyright": "© <span id=\"year\"></span> Bruno Gonçalves. Todos los derechos reservados.",
+      "rights": "Todos los derechos reservados"
+    },
+    "typed": {
+      "strings": ["Desarrollador .NET", "Especialista en Clean Architecture", "Apasionado por la Programación"]
+    }
+  }
+}
