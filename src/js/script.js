@@ -1,5 +1,4 @@
-﻿// ===== INTERNATIONALIZATION =====
-let currentLanguage = 'pt'; // Padrão: Português
+﻿let currentLanguage = 'pt'; // Padrão: Português
 let translations = {};
 let translationsLoaded = false;
 
@@ -58,7 +57,6 @@ function updatePageLanguage() {
             if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
                 element.placeholder = translation;
             } else if (Array.isArray(translation)) {
-                // Se for um array, gerar lista de itens
                 element.innerHTML = translation.map(item => `<li>${item}</li>`).join('');
             } else {
                 element.innerHTML = translation;
@@ -70,7 +68,6 @@ function updatePageLanguage() {
         }
     });
     
-    // Update Typed.js strings
     initializeTyped();
     
     console.log(`✓ ${translatedCount} elementos traduzidos | ✗ ${failedCount} elementos sem tradução`);
@@ -109,7 +106,6 @@ function updateLanguageButtons() {
     });
 }
 
-// ===== MENU TOGGLE =====
 let menuIcon = document.querySelector('#menu-icon');
 let navbar = document.querySelector('.navbar');
 
@@ -118,11 +114,9 @@ menuIcon.onclick = () => {
     navbar.classList.toggle('active');
 }
 
-// ===== NAVIGATION HIGHLIGHT =====
 let sections = document.querySelectorAll('section');
 let navLinks = document.querySelectorAll('header nav a');
 
-// close mobile menu when a navigation link is clicked
 navLinks.forEach(link => {
     link.addEventListener('click', () => {
         menuIcon.classList.remove('bx-x');
@@ -130,7 +124,6 @@ navLinks.forEach(link => {
     });
 });
 
-// ===== PROJECT SLIDERS CONFIG =====
 const projectSliders = {
     'churrasquinho-slider': {
         images: Array.from({length: 17}, (_, i) => './src/images/Churrasquinho/' + (i + 1) + '.png'),
@@ -187,14 +180,24 @@ window.onscroll = () => {
 function initializeTyped() {
     if (!window.Typed) return;
     
-    // Remove any existing Typed instance
     const typedElement = document.getElementById('typed');
     if (typedElement && typedElement._typed) {
         typedElement._typed.destroy();
     }
     
-    const typedStrings = getTranslation('typed.strings') || ['Desenvolvedor .NET', 'Especialista em Clean Architecture', 'Apaixonado por Programação'];
-    
+    const defaultTypedStrings = [
+        'Desenvolvedor .NET',
+        'Especialista em Clean Architecture',
+        'Apaixonado por Programação'
+    ];
+
+    const typedStringsRaw = getTranslation('typed.strings');
+    const typedStrings = Array.isArray(typedStringsRaw) && typedStringsRaw.length
+        ? typedStringsRaw
+        : (typeof typedStringsRaw === 'string' && typedStringsRaw.trim()
+            ? typedStringsRaw.split(/\s*[,;]\s*/).filter(Boolean)
+            : defaultTypedStrings);
+
     new Typed('#typed', {
         strings: typedStrings,
         typeSpeed: 60,
