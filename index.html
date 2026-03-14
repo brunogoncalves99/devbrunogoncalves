@@ -74,13 +74,19 @@
         <i class="bx bx-menu" id="menu-icon"></i>
 
         <nav class="navbar">
-            <a href="#home" class="active" aria-label="Ir para Home">Home</a>
-            <a href="#about" aria-label="Ir para Sobre">Sobre</a>
-            <a href="#experience" aria-label="Ir para Experiência">Experiência</a>
-            <a href="#skills" aria-label="Ir para Conhecimento">Conhecimento</a>
-            <a href="#projects" aria-label="Ir para Projetos">Projetos</a>
-            <a href="#contact" aria-label="Ir para Contato">Contato</a>
+            <a href="#home" class="active" aria-label="Ir para Home" data-i18n="nav.home">Home</a>
+            <a href="#about" aria-label="Ir para Sobre" data-i18n="nav.about">Sobre</a>
+            <a href="#experience" aria-label="Ir para Experiência" data-i18n="nav.experience">Experiência</a>
+            <a href="#skills" aria-label="Ir para Conhecimento" data-i18n="nav.skills">Conhecimento</a>
+            <a href="#projects" aria-label="Ir para Projetos" data-i18n="nav.projects">Projetos</a>
+            <a href="#contact" aria-label="Ir para Contato" data-i18n="nav.contact">Contato</a>
         </nav>
+
+        <div class="language-selector">
+            <button id="lang-pt" class="lang-btn active" data-lang="pt">PT</button>
+            <button id="lang-en" class="lang-btn" data-lang="en">EN</button>
+            <button id="lang-es" class="lang-btn" data-lang="es">ES</button>
+        </div>
 
         <div class="social-media">
             <a href="https://github.com/brunogoncalves99" target="_blank"><i class="bx bxl-github"></i></a>
@@ -95,8 +101,8 @@
 
     <section class="home section-offset" id="home">
         <div class="home-content">
-            <h3>Olá, meu nome é</h3>
-            <h1>Bruno Gonçalves</h1>
+            <h3 data-i18n="hero.greeting">Olá, meu nome é</h3>
+            <h1 data-i18n="hero.name">Bruno Gonçalves</h1>
             <h3>E eu sou um <span id="typed"></span></h3>
             
             <div class="status-container">
@@ -106,7 +112,7 @@
                 </div>
             </div>
             
-            <p>Sou graduado em Sistemas de Informação e tenho 4 anos de experiência em desenvolvimento de software. Tenho trabalhado com .NET, C# e SQL Server na criação e manutenção de APIs, queries e procedures. Tenho familiaridade com Git e gerencio todo o ciclo de desenvolvimento de aplicações robustas. Sou apaixonado por programação e procuro um desafio onde possa aplicar meu conhecimento técnico para contribuir com soluções inovadoras e com o crescimento da equipe.</p>
+            <p data-i18n="hero.description">Sou graduado em Sistemas de Informação e tenho 4 anos de experiência em desenvolvimento de software. Tenho trabalhado com .NET, C# e SQL Server na criação e manutenção de APIs, queries e procedures. Tenho familiaridade com Git e gerencio todo o ciclo de desenvolvimento de aplicações robustas. Sou apaixonado por programação e procuro um desafio onde possa aplicar meu conhecimento técnico para contribuir com soluções inovadoras e com o crescimento da equipe.</p>
         </div>
             
         <div class="home-img">
@@ -123,7 +129,7 @@
         </div>
 
         <div class="about-content">
-            <h2 class="heading">Sobre <span>Mim</span></h2>
+            <h2 class="heading" data-i18n="about.title">Sobre <span>Mim</span></h2>
            
             <div class="about-story">
                 <p>
@@ -154,14 +160,14 @@
                     <div class="metric-icon"><i class='bx bx-code-block'></i></div>
                     <div class="metric-content">
                         <span class="metric-number">4</span>
-                        <span class="metric-label">Anos de Experiência</span>
+                        <span class="metric-label" data-i18n="about.experience">Anos de Experiência</span>
                     </div>
                 </div>
                 <div class="metric-item">
                     <div class="metric-icon"><i class='bx bx-briefcase-alt'></i></div>
                     <div class="metric-content">
                         <span class="metric-number">4</span>
-                        <span class="metric-label">Projetos Completos</span>
+                        <span class="metric-label" data-i18n="about.projects">Projetos Completos</span>
                     </div>
                 </div>
                 <div class="metric-item">
@@ -181,14 +187,14 @@
             </div>
 
             <div class="about-buttons">
-                <a href="src/images/curriculo-bruno-goncalves.pdf" download class="btn btn-secondary"> Baixar Currículo </a>
+                <a href="src/images/curriculo-bruno-goncalves.pdf" download class="btn btn-secondary" data-i18n="hero.cv"> Baixar Currículo </a>
             </div> 
         </div>
 
     </section>
 
     <section class="experience" id="experience">
-        <h2 class="heading">Experiência <span>Profissional</span></h2>
+        <h2 class="heading" data-i18n="experience.title">Experiência <span>Profissional</span></h2>
         
         <div class="experience-container">
             <div class="experience-item">
@@ -269,7 +275,7 @@
 
     <section class="skills" id="skills">
 
-        <h1 class="heading"><span>Habilidades</span></h1>
+        <h1 class="heading" data-i18n="skills.title"><span>Habilidades</span></h1>
 
         <div class="skills-container">
             <div class="skills-column">
@@ -423,14 +429,14 @@
     </section>
 
     <section class="projects" id="projects">
-        <h2 class="heading">Meus <span>Projetos</span></h2>
-        <p class="projects-subtitle">Confira alguns dos projetos que desenvolvi aplicando Clean Architecture, DDD e as melhores práticas</p>
+        <h2 class="heading" data-i18n="projects.title">Meus <span>Projetos</span></h2>
+        <p class="projects-subtitle" data-i18n="projects.subtitle">Confira alguns dos projetos que desenvolvi aplicando Clean Architecture, DDD e as melhores práticas</p>
 
         <div class="projects-filter" role="tablist" aria-label="Filtrar projetos por categoria">
-            <button class="filter-btn active" data-filter="all" role="tab" aria-selected="true" aria-label="Mostrar todos os projetos">Todos</button>
-            <button class="filter-btn" data-filter=".net" role="tab" aria-selected="false" aria-label="Mostrar projetos .NET">.NET</button>
-            <button class="filter-btn" data-filter="web" role="tab" aria-selected="false" aria-label="Mostrar projetos web">Web</button>
-            <button class="filter-btn" data-filter="fullstack" role="tab" aria-selected="false" aria-label="Mostrar projetos full stack">Full Stack</button>
+            <button class="filter-btn active" data-filter="all" role="tab" aria-selected="true" aria-label="Mostrar todos os projetos" data-i18n="projects.filters.all">Todos</button>
+            <button class="filter-btn" data-filter=".net" role="tab" aria-selected="false" aria-label="Mostrar projetos .NET" data-i18n="projects.filters.net">.NET</button>
+            <button class="filter-btn" data-filter="web" role="tab" aria-selected="false" aria-label="Mostrar projetos web" data-i18n="projects.filters.web">Web</button>
+            <button class="filter-btn" data-filter="fullstack" role="tab" aria-selected="false" aria-label="Mostrar projetos full stack" data-i18n="projects.filters.fullstack">Full Stack</button>
         </div>
 
         <div class="projects-container">
@@ -455,8 +461,8 @@
                 </div>
 
                 <div class="project-content">
-                    <h3>Sistema de Churrascaria</h3>
-                    <p class="project-description">
+                    <h3 data-i18n="projects.churrasquinho.title">Sistema de Churrascaria</h3>
+                    <p class="project-description" data-i18n="projects.churrasquinho.description">
                         Sistema completo de gestão para churrascarias com controle de mesas, pedidos, 
                         comandas e dashboard em tempo real. Desenvolvido com .NET 8, Clean Architecture 
                         e autenticação JWT.
@@ -531,8 +537,8 @@
                 </div>
 
                 <div class="project-content">
-                    <h3>Mini-Biblioteca</h3>
-                    <p class="project-description">
+                    <h3 data-i18n="projects.minibiblioteca.title">Mini-Biblioteca</h3>
+                    <p class="project-description" data-i18n="projects.minibiblioteca.description">
                         Sistema de gestão de biblioteca com controle de empréstimos, devoluções, 
                         cálculo automático de multas por atraso e gerenciamento de acervo. 
                         Implementado com padrões DDD e CQRS.
@@ -610,8 +616,8 @@
                 </div>
 
                 <div class="project-content">
-                    <h3>Mini-Ecommerce</h3>
-                    <p class="project-description">
+                    <h3 data-i18n="projects.miniecommerce.title">Mini-Ecommerce</h3>
+                    <p class="project-description" data-i18n="projects.miniecommerce.description">
                         Plataforma de e-commerce completa com carrinho de compras, sistema de cupons, 
                         gestão de produtos e categorias. Arquitetura escalável preparada para microserviços.
                     </p>
@@ -687,8 +693,8 @@
                     </button>
                 </div>
                 <div class="project-content">
-                    <h3>Sistema Financeiro Monitor</h3>
-                    <p class="project-description">
+                    <h3 data-i18n="projects.financeiro.title">Sistema Financeiro Monitor</h3>
+                    <p class="project-description" data-i18n="projects.financeiro.description">
                         Sistema de monitoramento de cotações de moedas e indicadores econômicos com alertas 
                         inteligentes por e-mail. Consome APIs públicas do Banco Central, processa dados em 
                         background e exibe dashboards interativos com gráficos em tempo real.
@@ -747,7 +753,7 @@
             </div>
 
             <div class="project-card coming-soon">
-                <div class="project-icon"> aria-hidden="false"
+                <div class="project-icon" aria-hidden="false">
                     <i class='bx bx-code-alt'></i>
                 </div>
                 <div class="project-content">
@@ -780,20 +786,20 @@
     </section>
 
     <section class="contact" id="contact">
-      <h2 class="heading">Fale <span>Comigo</span></h2>
+      <h2 class="heading" data-i18n="contact.title">Fale <span>Comigo</span></h2>
 
       <div class="contact-container">
         <form id="contact-form" class="contact-form">
           <div class="form-group">
-            <input type="text" id="name" name="name" placeholder="Seu Nome" required>
+            <input type="text" id="name" name="name" placeholder="Seu Nome" data-i18n="contact.name" required>
           </div>
           <div class="form-group">
-            <input type="email" id="email" name="email" placeholder="Seu E-mail" required>
+            <input type="email" id="email" name="email" placeholder="Seu E-mail" data-i18n="contact.email" required>
           </div>
           <div class="form-group">
-            <textarea id="message" name="message" placeholder="Sua Mensagem" rows="5" required></textarea>
+            <textarea id="message" name="message" placeholder="Sua Mensagem" data-i18n="contact.message" rows="5" required></textarea>
           </div>
-          <button type="submit" class="btn">Enviar Mensagem</button>
+          <button type="submit" class="btn" data-i18n="contact.send">Enviar Mensagem</button>
           <div id="form-feedback" class="form-feedback"></div>
         </form>
 
@@ -829,7 +835,7 @@
 
     <footer class="footer">
         <div class="footer-text">
-            <p>&copy; <span id="year"></span> by Bruno Gonçalves | Todos os direitos reservados.</p>
+            <p data-i18n="footer.copyright">&copy; <span id="year"></span> by Bruno Gonçalves | Todos os direitos reservados.</p>
         </div>
 
         <div class="footer-iconTop">
