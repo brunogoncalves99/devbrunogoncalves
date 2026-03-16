@@ -39,38 +39,43 @@ function setLanguage(lang) {
     localStorage.setItem('language', lang);
     console.log('✓ Idioma alterado para:', lang);
     
-    updatePageLanguage();
-    updateLanguageButtons();
+    // Small delay to ensure smooth transition
+    setTimeout(() => {
+        updatePageLanguage();
+        updateLanguageButtons();
+    }, 50);
 }
 
 function updatePageLanguage() {
     console.log('🔄 Atualizando página para idioma:', currentLanguage);
-    const elements = document.querySelectorAll('[data-i18n]');
-    let translatedCount = 0;
-    let failedCount = 0;
-    
-    elements.forEach(element => {
-        const key = element.getAttribute('data-i18n');
-        const translation = getTranslation(key);
-        
-        if (translation) {
-            if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
-                element.placeholder = translation;
-            } else if (Array.isArray(translation)) {
-                element.innerHTML = translation.map(item => `<li>${item}</li>`).join('');
+
+    // Small delay to ensure all elements are ready
+    setTimeout(() => {
+        const elements = document.querySelectorAll('[data-i18n]');
+        let translatedCount = 0;
+        let failedCount = 0;
+
+        elements.forEach(element => {
+            const key = element.getAttribute('data-i18n');
+            const translation = getTranslation(key);
+
+            if (translation) {
+                if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
+                    element.placeholder = translation;
+                } else if (Array.isArray(translation)) {
+                    element.innerHTML = translation.map(item => `<li>${item}</li>`).join('');
+                } else {
+                    element.innerHTML = translation;
+                }
+                translatedCount++;
             } else {
-                element.innerHTML = translation;
+                console.warn(`✗ Tradução não encontrada para: ${key}`);
+                failedCount++;
             }
-            translatedCount++;
-        } else {
-            console.warn(`✗ Tradução não encontrada para: ${key}`);
-            failedCount++;
-        }
-    });
-    
-    initializeTyped();
-    
-    console.log(`✓ ${translatedCount} elementos traduzidos | ✗ ${failedCount} elementos sem tradução`);
+        });
+
+        console.log(`✓ ${translatedCount} elementos traduzidos | ✗ ${failedCount} elementos sem tradução`);
+    }, 100);
 }
 
 function getTranslation(key) {
@@ -177,51 +182,6 @@ window.onscroll = () => {
     navbar.classList.remove('active');
 };
 
-function initializeTyped() {
-    if (!window.Typed) return;
-    
-    const typedElement = document.getElementById('typed');
-    if (!typedElement) return;
-
-    // Remove any existing Typed.js instance + leftover cursor elements
-    if (typedElement._typed) {
-        typedElement._typed.destroy();
-    }
-
-    const previousCursor = typedElement.parentElement?.querySelector('.typed-cursor');
-    if (previousCursor) {
-        previousCursor.remove();
-    }
-
-    // Ensure we start from a clean state (no partial text when switching languages)
-    typedElement.textContent = '';
-    
-    const defaultTypedStrings = [
-        'Desenvolvedor .NET',
-        'Especialista em Clean Architecture',
-        'Apaixonado por Programação'
-    ];
-
-    const typedStringsRaw = getTranslation('typed.strings');
-    const typedStrings = Array.isArray(typedStringsRaw) && typedStringsRaw.length
-        ? typedStringsRaw
-        : (typeof typedStringsRaw === 'string' && typedStringsRaw.trim()
-            ? typedStringsRaw.split(/\s*[,;]\s*/).filter(Boolean)
-            : defaultTypedStrings);
-
-    new Typed('#typed', {
-        strings: typedStrings,
-        typeSpeed: 60,
-        backSpeed: 30,
-        backDelay: 1500,
-        loop: true,
-        showCursor: false,
-        smartBackspace: true,
-        fadeOut: true,
-        fadeOutDelay: 300
-    });
-}
-
 function updateFooterYear() {
     const yearEl = document.getElementById('year');
     if (yearEl) yearEl.textContent = new Date().getFullYear();
@@ -307,10 +267,6 @@ document.addEventListener('DOMContentLoaded', function() {
     if (pre) {
         pre.style.opacity = 0;
         setTimeout(() => pre.remove(), 600);
-    }
-
-    if (window.Typed) {
-        initializeTyped();
     }
 
     const scrollBtn = document.getElementById('scroll-top');
@@ -545,6 +501,12 @@ function stopAutoplay(sliderId) {
 }
 
 document.addEventListener('DOMContentLoaded', function() {
+    // Load saved language from localStorage
+    const savedLanguage = localStorage.getItem('language');
+    if (savedLanguage && (savedLanguage === 'pt' || savedLanguage === 'en' || savedLanguage === 'es')) {
+        currentLanguage = savedLanguage;
+    }
+
     // Initialize project filters
     setupProjectFilters();
 

@@ -1,9 +1,7 @@
 const fs = require('fs');
 
-// Ler HTML
 const html = fs.readFileSync('index.html', 'utf8');
 
-// Extrair todas as chaves data-i18n
 const dataI18nRegex = /data-i18n="([^"]+)"/g;
 const keys = [];
 let match;
@@ -20,7 +18,7 @@ console.log('Chaves encontradas:', uniqueKeys.length);
 const missingKeys = [];
 uniqueKeys.forEach(key => {
     const parts = key.split('.');
-    let obj = translations.pt; // verificar apenas em PT primeiro
+    let obj = translations.pt; 
     for (const part of parts) {
         obj = obj && obj[part];
     }

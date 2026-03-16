@@ -82,7 +82,61 @@
     },
     "skills": {
       "title": "<span>Habilidades</span>",
-      "subtitle": "Meu nível técnico"
+      "subtitle": "Meu nível técnico",
+      "hardSkills": {
+        "title": "💻 Hard Skills",
+        "csharp": {
+          "title": "C#",
+          "description": "Desenvolvimento backend com C# e .NET, uso de boas práticas e padrões de projeto."
+        },
+        "dotnet": {
+          "title": ".NET Core",
+          "description": "Criação de APIs REST, aplicações MVC e serviços com .NET Core e Entity Framework."
+        },
+        "sqlserver": {
+          "title": "SQL Server",
+          "description": "Customizações de queries, otimizações de consultas, criação de procedures e tabelas."
+        },
+        "javascript": {
+          "title": "JavaScript",
+          "description": "Manipulação de DOM, eventos, integração com APIs e uso de jQuery."
+        },
+        "html5": {
+          "title": "HTML5",
+          "description": "Criação de estruturas semânticas e acessíveis para aplicações web."
+        },
+        "css3": {
+          "title": "CSS3",
+          "description": "Estilização responsiva, animações e layouts modernos com Flexbox e Grid."
+        }
+      },
+      "softSkills": {
+        "title": "🤝 Soft Skills",
+        "leadership": {
+          "title": "Liderança Técnica",
+          "description": "Mentoria e orientação de desenvolvedores juniores com foco em crescimento técnico."
+        },
+        "teamwork": {
+          "title": "Trabalho em Equipe",
+          "description": "Colaboração com times ágeis, foco em entregas contínuas e objetivos comuns."
+        },
+        "proactivity": {
+          "title": "Proatividade",
+          "description": "Busca constante por soluções e melhorias de processos e performance."
+        },
+        "results": {
+          "title": "Foco em Resultados",
+          "description": "Comprometimento com entregas de valor e qualidade para o cliente final."
+        },
+        "learning": {
+          "title": "Aprendizado Contínuo",
+          "description": "Atualização constante com novas tecnologias, boas práticas e tendências."
+        },
+        "communication": {
+          "title": "Comunicação",
+          "description": "Clareza na comunicação e alinhamento com o time para atingir metas conjuntas."
+        }
+      }
     },
     "experience": {
       "title": "Experiência <span>Profissional</span>",
@@ -164,9 +218,6 @@
     "footer": {
       "copyright": "© <span id=\"year\"></span> Bruno Gonçalves. Todos os direitos reservados.",
       "rights": "Todos os direitos reservados"
-    },
-    "typed": {
-      "strings": ["Desenvolvedor .NET", "Especialista em Clean Architecture", "Apaixonado por Programação"]
     }
   },
   "en": {
@@ -388,9 +439,6 @@
     "footer": {
       "copyright": "© <span id=\"year\"></span> Bruno Gonçalves. All rights reserved.",
       "rights": "All rights reserved"
-    },
-    "typed": {
-      "strings": [".NET Developer", "Clean Architecture Specialist", "Programming Passionate"]
     }
   },
   "es": {
@@ -612,9 +660,6 @@
     "footer": {
       "copyright": "© <span id=\"year\"></span> Bruno Gonçalves. Todos los derechos reservados.",
       "rights": "Todos los derechos reservados"
-    },
-    "typed": {
-      "strings": ["Desarrollador .NET", "Especialista en Clean Architecture", "Apasionado por la Programación"]
     }
   }
 }
